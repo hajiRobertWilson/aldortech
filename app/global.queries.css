@@ -1,0 +1,12 @@
+@media(width<=1300px){
+    .navBar ul{
+        width:60%;
+        transition:all 0.5s;
+    }
+}
+@media(width<=1000px){
+    .navBar ul{
+        width:70%;
+        transition:all 0.5s;
+    }
+}
