@@ -2,40 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --navBg:aqua;
-    --link-color:blue;
-}
-.dark-theme{
-    --navBg:darkgrey;
-    --link-color:white;
+:root {
+    /* --navBg:aqua; */
+    --text-color: black;
+    --link-color-hover: blue;
+    --bg-color:rgb(221, 220, 229);
+    --bg-gradient: linear-gradient(329deg, rgba(221, 220, 229, 1) 11%, rgba(231, 231, 233, 1) 34%, rgba(224, 247, 252, 1) 100%);
 }
 
-body{
-    max-width:1800px;
+.dark-theme {
+    /* --navBg: darkgrey; */
+    --link-color-hover:#011F5B;
+    --text-color: white;
+    --bg-color:#130f40;
+    --bg-gradient: linear-gradient(315deg, #130f40 0%, #000000 74%);
+}
+
+body {
+    max-width: 1800px;
     margin: auto;
+    background-repeat: no-repeat;
+    background-color: var(--bg-color);
+    background: var(--bg-gradient);
 }
 
+main {
+    color:var(--text-color);
+    height: 100vh;
+    transition:all 0.5s;
+}
 
 .navBar {
     display: flex;
     flex-flow: row nowrap;
-    width:100%;
-    background-color: var(--navBg);
+    width: 100%;
+    /* background-color: var(--navBg); */
     justify-content: space-between;
-    padding:10px 30px;
+    padding: 10px 100px;
+    transition: all 0.5s;
 }
+
 .navBar ul {
     display: flex;
-    flex-flow:row nowrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
-    width:50%;
-    color: var(--link-color);
-    transition:all 0.5s;
+    width: 60%;
+    color: var(--text-color);
+    transition: all 0.5s;
 }
-.navBar ul li{
+
+.navBar li {
     font-size: 1.3rem;
+    transition: all 0.5s;
 }
-.navBar .logoContainer{
+.navBar li:hover {
+    color: var(--link-color-hover);
+    transition: all 0.5s;
+}
+
+.navBar .logoContainer {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
+    transition: all 1s;
+}
+
+.navBar .menuBtn {
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    z-index: 100;
+}
+.navBar .menuBtn:hover span{
+    background-color: var(--link-color-hover);
+}
+
+.navBar .menuBtn span {
+    width: 35px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--text-color);
+    transition: all 0.5s;
+}
+
+.navBar .menuBtn.open span:first-child {
+    transform: rotate(45deg) translate(10px, 3px);
+}
+
+.navBar .menuBtn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.navBar .menuBtn.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -4px);
 }

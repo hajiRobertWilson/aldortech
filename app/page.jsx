@@ -8,21 +8,23 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     let btn = document.getElementById('themeBtn')
-    const toggleTheme=() => {
+    const toggleTheme = () => {
       document.documentElement.classList.toggle('dark-theme')
     }
 
-    btn.addEventListener('click',toggleTheme);
+    btn.addEventListener('click', toggleTheme);
 
-    return ()=>{
-      btn.removeEventListener('click',toggleTheme)
+    return () => {
+      btn.removeEventListener('click', toggleTheme)
     }
   }, [])
 
   return (
     <>
-      <h1>Home Page</h1>
-      <button id="themeBtn" type="button">change theme</button>
+      <main>
+        <h1>Home Page</h1>
+        <button id="themeBtn" type="button">change theme</button>
+      </main>
     </>
   );
 }
