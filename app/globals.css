@@ -22,17 +22,11 @@
 
 body {
     margin:auto;
-    max-width: 1000px;
+    max-width: 1800px;
     background-repeat: no-repeat;
     background-color: var(--bg-color);
     background: var(--bg-gradient);
 }
-/* .bodyContainer{
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-sizing: border-box;
-} */
 
 main {
     color: var(--text-color);
@@ -66,14 +60,13 @@ main {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
-    padding: 20px 100px;
+    padding: 10px 100px;
     justify-content: space-between;
 }
 
 .sticky {
-    padding:10px 0px;
+    padding:5px 0px;
     border-bottom: 2px solid var(--nav-border);
-    /* background-color: var(--navBg); */
 }
 
 .navContainer ul {
