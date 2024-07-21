@@ -10,7 +10,9 @@ export const metadata = {
 export default function Blogs() {
     return (
         <>
-            <h1>Blogs Page</h1>
+            <main>
+                <h1>Blogs Page</h1>
+            </main>
         </>
     );
 }

@@ -10,7 +10,9 @@ export const metadata = {
 export default function About() {
     return (
         <>
-            <h1>About Page</h1>
+            <main>
+                <h1>About Page</h1>
+            </main>
         </>
     );
 }

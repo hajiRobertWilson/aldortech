@@ -1,3 +1,8 @@
+@media(width>=1800px){
+    body{
+        margin:auto;
+    }
+}
 @media(width<=1300px){
     .navBar ul{
         width:70%;
@@ -5,10 +10,7 @@
     }
 }
 @media(width<=1000px){
-    .navBar{
-        padding:10px 70px;
-    }
-    .navBar ul{
+    .navContainer ul{
         display:none;
     }
     .navBar .menuBtn{

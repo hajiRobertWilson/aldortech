@@ -10,7 +10,9 @@ export const metadata = {
 export default function Services() {
     return (
         <>
-            <h1>Services Page</h1>
+            <main>
+                <h1>Services Page</h1>
+            </main>
         </>
     );
 }

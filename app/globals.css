@@ -3,46 +3,80 @@
 @tailwind utilities;
 
 :root {
-    /* --navBg:aqua; */
+    --nav-border:rgba(221, 220, 229, 1);
+    --navBg: rgba(224, 247, 252, 1);
     --text-color: black;
     --link-color-hover: blue;
-    --bg-color:rgb(221, 220, 229);
+    --bg-color: rgb(221, 220, 229);
     --bg-gradient: linear-gradient(329deg, rgba(221, 220, 229, 1) 11%, rgba(231, 231, 233, 1) 34%, rgba(224, 247, 252, 1) 100%);
 }
 
 .dark-theme {
-    /* --navBg: darkgrey; */
-    --link-color-hover:#011F5B;
+    --nav-border:whitesmoke;
+    --navBg: #000000;
+    --link-color-hover: #011F5B;
     --text-color: white;
-    --bg-color:#130f40;
+    --bg-color: #130f40;
     --bg-gradient: linear-gradient(315deg, #130f40 0%, #000000 74%);
 }
 
 body {
-    max-width: 1800px;
-    margin: auto;
+    margin:auto;
+    max-width: 1000px;
     background-repeat: no-repeat;
     background-color: var(--bg-color);
     background: var(--bg-gradient);
 }
+/* .bodyContainer{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+} */
 
 main {
-    color:var(--text-color);
+    color: var(--text-color);
     height: 100vh;
-    transition:all 0.5s;
-}
-
-.navBar {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100%;
-    /* background-color: var(--navBg); */
-    justify-content: space-between;
-    padding: 10px 100px;
+    margin-top: 100px;
     transition: all 0.5s;
 }
 
-.navBar ul {
+.navBar {
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    background-color: var(--navBg);
+    top: 0;
+    transition: all 0.4s;
+}
+.menuLinks{
+    color:var(--text-color);
+    background-color: var(--navBg);
+    max-height: 0;
+    z-index: 100;
+    overflow: hidden;
+    transition:max-height 0.3s ease-in;
+}
+.menuLinks.show{
+    max-height: 500px;
+    width:100%;
+}
+.navContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    padding: 20px 100px;
+    justify-content: space-between;
+}
+
+.sticky {
+    padding:10px 0px;
+    border-bottom: 2px solid var(--nav-border);
+    /* background-color: var(--navBg); */
+}
+
+.navContainer ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -51,16 +85,17 @@ main {
     transition: all 0.5s;
 }
 
-.navBar li {
+.navContainer li {
     font-size: 1.3rem;
     transition: all 0.5s;
 }
-.navBar li:hover {
+
+.navContainer li:hover {
     color: var(--link-color-hover);
     transition: all 0.5s;
 }
 
-.navBar .logoContainer {
+.navContainer .logoContainer {
     color: var(--text-color);
     display: flex;
     align-items: center;
@@ -68,7 +103,7 @@ main {
     transition: all 1s;
 }
 
-.navBar .menuBtn {
+.navContainer .menuBtn {
     display: none;
     flex-flow: column nowrap;
     align-items: center;
@@ -79,11 +114,12 @@ main {
     cursor: pointer;
     z-index: 100;
 }
-.navBar .menuBtn:hover span{
+
+.navContainer .menuBtn:hover span {
     background-color: var(--link-color-hover);
 }
 
-.navBar .menuBtn span {
+.navContainer .menuBtn span {
     width: 35px;
     height: 4px;
     border-radius: 2px;
@@ -91,14 +127,14 @@ main {
     transition: all 0.5s;
 }
 
-.navBar .menuBtn.open span:first-child {
+.navContainer .menuBtn.open span:first-child {
     transform: rotate(45deg) translate(10px, 3px);
 }
 
-.navBar .menuBtn.open span:nth-child(2) {
+.navContainer .menuBtn.open span:nth-child(2) {
     opacity: 0;
 }
 
-.navBar .menuBtn.open span:last-child {
+.navContainer .menuBtn.open span:last-child {
     transform: rotate(-45deg) translate(10px, -4px);
 }
