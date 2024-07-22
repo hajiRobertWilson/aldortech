@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import "./global.queries.css";
 import Footer from "@/components/Footer";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
 // import Loader from "@/components/loading";
 
 export const metadata = {

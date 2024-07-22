@@ -1,4 +1,6 @@
 "use client"
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -7,39 +9,45 @@ export default function Navbar() {
     const path = ['/', '/services', '/portfolio', '/blogs', '/about', '/contact'];
     const index = [0, 1, 2, 3, 4, 5];
     const [menuElement, setMenuElement] = useState();
-    // const [navElements, setNavElements] = useState();
-    // const [linkColor, setLinkColor] = useState();
     const [theme, setTheme] = useState('light')
-    const [activeTab,setActiveTab]=useState('Home')
+    const [activeTab, setActiveTab] = useState('Home')
+    const [dropdownBtn, setDropdownBtn] = useState();
+    const [windowWidth, setWindowWidth] = useState();
 
-    const handleMenu = (elem) => {
-        elem.classList.toggle('open')
+    const handleMenu = () => {
+        dropdownBtn.classList.toggle('open')
         menuElement.classList.toggle('show')
     }
-    // const handleMenuList=()=>{
-    //     menuElement.classList.toggle('show')
-    // }
+    const handleMenuList = () => {
+        if (dropdownBtn) {
+            dropdownBtn.classList.toggle('open')
+        }
+        menuElement.classList.toggle('show')
+    }
     const handleTab = (ind) => {
         setActiveTab(links[ind])
-        // navElements.forEach(element => {
-            // element.style.color = (theme === 'light') ? 'black' : 'white';
-            // if (element.dataset.value === links[ind]) {
-            //     element.style.color = 'blue';
-            //     console.log('Active Tab:',links[ind])
-                // setActiveTab(links[ind])
-            // }
-        // });
     }
-
 
 
     useEffect(() => {
-        const root = document.documentElement;
         // const styles = getComputedStyle(root);
-        const navItem=document.querySelectorAll('.navLink')
         // setLinkColor(styles.getPropertyValue('--text-color').trim());
-        // setNavElements(navItem)
-        setMenuElement(document.querySelector('.menuLinks'))
+        setDropdownBtn(document.getElementById('barBtn'));
+
+
+        // ---Tab Handler and active tab functionallity---//
+        const root = document.documentElement;
+        const navItem = document.querySelectorAll('.navLink')
+        const menulinks = document.querySelector('.menuLinks')
+        setMenuElement(menulinks)
+        navItem.forEach(ele => {
+            ele.style.color = (theme === 'light') ? 'black' : 'white';
+            if (ele.dataset.value === activeTab) {
+                ele.style.color = 'blue'
+            }
+        })
+
+        //----Navbar, Buttons, Links, Scroll and related functionallity----//
         const navbar = document.querySelector('.navBar')
         const scrollFuntion = () => {
             if (document.body.scrollTop > 10 || root.scrollTop > 10) {
@@ -48,28 +56,44 @@ export default function Navbar() {
                 navbar.classList.remove('sticky')
             }
         }
-        window.onscroll = scrollFuntion
-        const btn = document.getElementById('themeBtn')
+        window.onscroll = scrollFuntion;
 
-        const toggleTheme = () => {
+        //---- Small Navbar responsiveness handler----//
+        const handleWindow = () => {
+            setWindowWidth(window.innerWidth)
+        }
+        window.addEventListener('resize', handleWindow);
+        if (windowWidth >= 1000 && dropdownBtn && dropdownBtn.classList.contains('open')) {
+            dropdownBtn.classList.remove('open')
+            menuElement.classList.remove('show')
+        }
+
+        // ----Theme Changing and Theme Button Handler----//
+        const themebtn = document.getElementById('themeBtnCont');
+        let inner = document.getElementById('inner');
+        const toggler = () => {
+            inner.classList.toggle('slide')
             root.classList.toggle('dark-theme');
             setTheme((theme === 'light') ? 'dark' : 'light')
+
         }
-        btn.addEventListener('click', toggleTheme);
-        navItem.forEach(ele => {
-            ele.style.color = (theme === 'light') ? 'black' : 'white';
-            if(ele.dataset.value===activeTab){
-                ele.style.color='blue'
-            }
-        })
+        themebtn.addEventListener('click', toggler);
+
+
         return () => {
             window.onscroll = null;
-            btn.removeEventListener('click', toggleTheme)
+            window.removeEventListener("resize", handleWindow)
+            themebtn.removeEventListener('click', toggler);
         }
-    }, [theme,activeTab])
+    }, [theme, activeTab, windowWidth])
 
     return (
         <>
+            <div className="toolBarCont">
+                <div id="themeBtnCont" className="themeBtnCont">
+                    <div id="inner" className="inner"><FontAwesomeIcon icon={(theme === 'light') ? faMoon : faSun} /></div>
+                </div>
+            </div>
             <div className="navBar">
                 <div className="navContainer">
                     <div className="logoContainer">
@@ -79,9 +103,8 @@ export default function Navbar() {
                         {
                             index.map(i => <li className="navLink" key={i} data-value={links[i]} onClick={() => handleTab(i)}><Link href={path[i]}>{links[i]}</Link></li>)
                         }
-                        <button id='themeBtn' type="button">Theme</button>
                     </ul>
-                    <div onClick={(e) => handleMenu(e.currentTarget)} className="menuBtn">
+                    <div id="barBtn" onClick={() => handleMenu()} className="menuBtn">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -90,7 +113,10 @@ export default function Navbar() {
                 <div className="menuLinks">
                     <ul>
                         {
-                            index.map(i => <li key={i}><Link href={path[i]}>{links[i]}</Link></li>)
+                            index.map(i => <li className="navLink" key={i} data-value={links[i]} onClick={() => {
+                                handleTab(i);
+                                handleMenuList();
+                            }}><Link href={path[i]}>{links[i]}</Link></li>)
                         }
                     </ul>
                 </div>

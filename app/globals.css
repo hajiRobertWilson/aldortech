@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 :root {
+    --theme-btn:#000000;
+    --theme-slider:#1679AB;
+    --theme-icon:white;
+    --toolbar-bg:rgba(221, 220, 229, 1);
     --nav-border:rgba(221, 220, 229, 1);
+    --dropdown-link-border:black;
     --navBg: rgba(224, 247, 252, 1);
     --text-color: black;
     --link-color-hover: blue;
@@ -12,7 +17,11 @@
 }
 
 .dark-theme {
+    --theme-btn:#000000;
+    --theme-icon:orange;
+    --toolbar-bg:#130f40;
     --nav-border:whitesmoke;
+    --dropdown-link-border:white;
     --navBg: #000000;
     --link-color-hover: #011F5B;
     --text-color: white;
@@ -35,13 +44,51 @@ main {
     transition: all 0.5s;
 }
 
+.toolBarCont{
+    height: 35px;
+    width:100%;
+    position:fixed;
+    top:0;
+    z-index: 100;
+    display: flex;
+    align-items:center;
+    justify-content:end;
+    background: var(--bg-gradient);
+}
+.toolBarCont .themeBtnCont{
+    position: relative;
+    margin:5px 20px;
+    height:15px;
+    width:60px;
+    background-color: var(--theme-slider);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.toolBarCont .themeBtnCont .inner{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--theme-icon);
+    height: 25px;
+    left:5px;
+    top:-5px;
+    width:25px;
+    background-color:var(--theme-btn) ;
+    border-radius: 50%;
+    transition:all 1s;
+}
+.toolBarCont .themeBtnCont .inner.slide{
+    left:30px;
+}
+
 .navBar {
     position: fixed;
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
     background-color: var(--navBg);
-    top: 0;
+    top: 35px;
     transition: all 0.4s;
 }
 .menuLinks{
@@ -54,19 +101,22 @@ main {
 }
 .menuLinks.show{
     max-height: 500px;
-    width:100%;
+}
+.menuLinks li{
+    margin:0 15px;
+    cursor: pointer;
+    padding: 5px 0 0 100px;
+    border-bottom:1px solid var(--dropdown-link-border);
 }
 .navContainer{
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
-    padding: 10px 100px;
+    padding: 15px 100px;
     justify-content: space-between;
 }
 
 .sticky {
-    padding:5px 0px;
-    border-bottom: 2px solid var(--nav-border);
+    border-bottom: 1px solid var(--nav-border);
 }
 
 .navContainer ul {
