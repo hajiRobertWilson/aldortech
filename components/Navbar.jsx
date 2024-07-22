@@ -7,9 +7,10 @@ export default function Navbar() {
     const path = ['/', '/services', '/portfolio', '/blogs', '/about', '/contact'];
     const index = [0, 1, 2, 3, 4, 5];
     const [menuElement, setMenuElement] = useState();
-    const [navElements, setNavElements] = useState();
-    const [linkColor,setLinkColor]=useState();
-    const [theme,setTheme]=useState('light')
+    // const [navElements, setNavElements] = useState();
+    // const [linkColor, setLinkColor] = useState();
+    const [theme, setTheme] = useState('light')
+    const [activeTab,setActiveTab]=useState('Home')
 
     const handleMenu = (elem) => {
         elem.classList.toggle('open')
@@ -19,19 +20,25 @@ export default function Navbar() {
     //     menuElement.classList.toggle('show')
     // }
     const handleTab = (ind) => {
-        navElements.forEach(element => {
-        element.style.color = linkColor;
-        if (element.dataset.value === links[ind]) {
-            element.style.color='blue';
-        }
-        });
+        setActiveTab(links[ind])
+        // navElements.forEach(element => {
+            // element.style.color = (theme === 'light') ? 'black' : 'white';
+            // if (element.dataset.value === links[ind]) {
+            //     element.style.color = 'blue';
+            //     console.log('Active Tab:',links[ind])
+                // setActiveTab(links[ind])
+            // }
+        // });
     }
 
 
 
     useEffect(() => {
-        const root=document.documentElement;
-        setNavElements(document.querySelectorAll('.navLink'))
+        const root = document.documentElement;
+        // const styles = getComputedStyle(root);
+        const navItem=document.querySelectorAll('.navLink')
+        // setLinkColor(styles.getPropertyValue('--text-color').trim());
+        // setNavElements(navItem)
         setMenuElement(document.querySelector('.menuLinks'))
         const navbar = document.querySelector('.navBar')
         const scrollFuntion = () => {
@@ -44,23 +51,22 @@ export default function Navbar() {
         window.onscroll = scrollFuntion
         const btn = document.getElementById('themeBtn')
 
-        const updateTheme=()=>{
-            const styles=getComputedStyle(root);
-            setLinkColor(styles.getPropertyValue('--text-color').trim());
-        }
-
-        updateTheme();
         const toggleTheme = () => {
-            document.documentElement.classList.toggle('dark-theme');
-            setTheme(theme==='light'?'dark':'light')
-            updateTheme()
-          }
+            root.classList.toggle('dark-theme');
+            setTheme((theme === 'light') ? 'dark' : 'light')
+        }
         btn.addEventListener('click', toggleTheme);
+        navItem.forEach(ele => {
+            ele.style.color = (theme === 'light') ? 'black' : 'white';
+            if(ele.dataset.value===activeTab){
+                ele.style.color='blue'
+            }
+        })
         return () => {
-            window.onload = null;
+            window.onscroll = null;
             btn.removeEventListener('click', toggleTheme)
         }
-    }, [])
+    }, [theme,activeTab])
 
     return (
         <>
