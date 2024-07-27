@@ -22,8 +22,11 @@
     }
 }
 @media(width<=600px){
-    .navBar{
-        padding:5px 40px;
+    .navContainer{
+        padding:5px 20px;
         transition: all 0.5s;
+    }
+    .menuLinks li{
+        padding: 5px 0 0 20px;
     }
 }
