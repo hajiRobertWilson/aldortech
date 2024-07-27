@@ -215,9 +215,9 @@ main {
 
 /*______________ Hero Section ________________ */
 .heroCont {
-    background: url('../public/bg.jpg');
+    /* background: url('../public/bg.jpg');
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     width: 100%;
     background-color: grey;
     height: 600px;
