@@ -16,6 +16,7 @@
     --theme-icon: white;
     --toolbar-bg: rgba(221, 220, 229, 1);
     --nav-border: rgba(221, 220, 229, 1);
+    --theme-border: white;
     --dropdown-link-border: black;
     --navBg: rgba(224, 247, 252, 1);
     --text-color: black;
@@ -30,6 +31,7 @@
 .dark-theme {
     --theme-btn: #000000;
     --theme-icon: orange;
+    --theme-border: #130f40;
     --toolbar-bg: #130f40;
     --nav-border: whitesmoke;
     --dropdown-link-border: white;
@@ -46,13 +48,14 @@
 body {
     margin: auto;
     max-width: 1800px;
-    min-width: 410px;
+    min-width: 370px;
     background-repeat: no-repeat;
     /* background-color: var(--bg-color); */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg4.jpg');
     background-position: center;
     background-size: cover;
     /* height: 100vh; */
+    /* max-height: 90vh; */
     /* overflow: scroll; */
     /* position: relative; */
 }
@@ -62,9 +65,9 @@ main {
     background-position: center;
     background-size: cover; */
     color: var(--text-color);
-    max-height: 86vh;
+    max-height: 100vh;
     overflow: scroll;
-    margin-top: 100px;
+    padding-top: 100px;
     transition: all 0.5s;
     /* position: absolute; */
 }
@@ -242,12 +245,12 @@ main {
     height: 600px;
     position: relative;
     overflow: hidden;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--theme-border);
     transition: all 0.5s;
 }
 
 .heroCont .colorCont {
-    background: var(--gradient-light);
+    background: var(--bg-gradient);
     width: 100%;
     transform: rotate(-45deg) translate(300px, 300px);
     height: 900px;
@@ -276,6 +279,7 @@ main {
     color: orange;
     font-size: 1.5rem;
     text-align: justify;
+    user-select: none;
 }
 
 .heroCont .rightContent .btnCont {
@@ -293,6 +297,7 @@ main {
     font-size: 1.2rem;
     color: var(--text-color);
     border-radius: 5px;
+    user-select: none;
 }
 
 /*__________________ End _____________________ */
