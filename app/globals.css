@@ -10,7 +10,9 @@
 /* -------------------------- Root Custome Properties ------------------------- */
 :root {
     --theme-btn: #000000;
-    --theme-slider: #1679AB;
+    --blue-1: #1679AB;
+    --gradient-dark: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    --gradient-light: linear-gradient(329deg, rgba(221, 220, 229, 1) 11%, rgba(231, 231, 233, 1) 34%, rgba(224, 247, 252, 1) 100%);
     --theme-icon: white;
     --toolbar-bg: rgba(221, 220, 229, 1);
     --nav-border: rgba(221, 220, 229, 1);
@@ -44,16 +46,27 @@
 body {
     margin: auto;
     max-width: 1800px;
+    min-width: 410px;
     background-repeat: no-repeat;
-    background-color: var(--bg-color);
-    background: var(--bg-gradient);
+    /* background-color: var(--bg-color); */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg4.jpg');
+    background-position: center;
+    background-size: cover;
+    /* height: 100vh; */
+    /* overflow: scroll; */
+    /* position: relative; */
 }
 
 main {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg4.jpg');
+    background-position: center;
+    background-size: cover; */
     color: var(--text-color);
-    height: 100vh;
+    max-height: 86vh;
+    overflow: scroll;
     margin-top: 100px;
     transition: all 0.5s;
+    /* position: absolute; */
 }
 
 /* ---------------------------------- End -------------------------------------- */
@@ -62,6 +75,7 @@ main {
 .toolBarCont {
     height: 35px;
     width: 100%;
+    max-width: 1800px;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -76,7 +90,7 @@ main {
     margin: 5px 20px;
     height: 15px;
     width: 60px;
-    background-color: var(--theme-slider);
+    background-color: var(--blue-1);
     border-radius: 20px;
     cursor: pointer;
 }
@@ -108,10 +122,11 @@ main {
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
+    max-width: 1800px;
     background-color: var(--navBg);
     top: 35px;
     transition: all 0.4s;
-    z-index: 50;
+    z-index: 100;
 }
 
 .menuLinks {
@@ -133,6 +148,10 @@ main {
     padding: 5px 0 0 100px;
     border-bottom: 1px solid var(--dropdown-link-border);
     transition: all 0.5s;
+}
+
+.menuLinks li a {
+    width: 100%;
 }
 
 .navContainer {
@@ -215,15 +234,20 @@ main {
 
 /*______________ Hero Section ________________ */
 .heroCont {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
     width: 100%;
-    background-color: grey;
     height: 600px;
+    position: relative;
     overflow: hidden;
-    transition: all 3s;
+    border-bottom: 2px solid white;
+    transition: all 0.5s;
 }
 
 .heroCont .colorCont {
-    background: var(--bg-gradient);
+    background: var(--gradient-light);
     width: 100%;
     transform: rotate(-45deg) translate(300px, 300px);
     height: 900px;
@@ -232,7 +256,43 @@ main {
 }
 
 .heroCont .leftContent {
-    width: 50%;
+    position: absolute;
+    width: 25%;
+    left: 150px;
+    top: 130px;
+    transition: all 0.5s;
+}
+
+.heroCont .rightContent {
+    position: absolute;
+    width: 25%;
+    right: 150px;
+    top: 210px;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.heroCont .leftContent>h3 {
+    color: orange;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.heroCont .rightContent .btnCont {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+.heroCont .rightContent .btnCont>a {
+    width: 100%;
+    height: 50px;
+    background-color: var(--blue-1);
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    border-radius: 5px;
 }
 
 /*__________________ End _____________________ */

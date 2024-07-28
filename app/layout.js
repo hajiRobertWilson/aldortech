@@ -23,13 +23,9 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
       <body>
-        <div className="bodyContainer">
-          <Navbar />
-          {/* <Loader> */}
-          {children}
-          {/* </Loader> */}
-          <Footer />
-        </div>
+        <Navbar />
+        {children}
+        {/* <Footer /> */}
       </body>
     </html>
   );

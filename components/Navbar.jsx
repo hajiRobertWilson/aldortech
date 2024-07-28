@@ -1,4 +1,5 @@
 "use client"
+import tabHandler from "@/stateLib";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -30,9 +31,9 @@ export default function Navbar() {
 
 
     useEffect(() => {
-        // const styles = getComputedStyle(root);
-        // setLinkColor(styles.getPropertyValue('--text-color').trim());
         setDropdownBtn(document.getElementById('barBtn'));
+        // setActiveTab((tabHandler.Tab !== 'Home') ? tabHandler.Tab : 'Home')
+        // tabHandler.Temp(setActiveTab)
 
 
         // ---Tab Handler and active tab functionallity---//
@@ -113,10 +114,10 @@ export default function Navbar() {
                 <div className="menuLinks">
                     <ul>
                         {
-                            index.map(i => <li className="navLink" key={i} data-value={links[i]} onClick={() => {
+                            index.map(i => <Link key={i} href={path[i]}><li className="navLink" data-value={links[i]} onClick={() => {
                                 handleTab(i);
                                 handleMenuList();
-                            }}><Link href={path[i]}>{links[i]}</Link></li>)
+                            }}>{links[i]}</li></Link>)
                         }
                     </ul>
                 </div>
@@ -124,3 +125,4 @@ export default function Navbar() {
         </>
     );
 }
+// export function TabState(){}
