@@ -24,6 +24,16 @@
     .heroCont .rightContent {
         right: 80px;
     }
+
+    .postCont1 .posterCont .postText,
+    .postCont2 .posterCont .postText {
+        font-size: 1.4rem;
+        max-height: 350px;
+        overflow: scroll;
+    }
+    .headingCont .cardsCont .cards{
+        width: 50%;
+    }
 }
 
 @media(width<=1100px) {
@@ -48,6 +58,29 @@
         width: 30%;
         right: 50px;
     }
+
+    .postCont1 .posterCont,
+    .postCont2 .posterCont {
+        flex-flow: column-reverse;
+        transition: all 0.5s;
+    }
+    .headingCont .boldtextCont{
+        flex-flow: column nowrap;
+    }
+    .headingCont .boldtextCont .paragraph,
+    .headingCont .boldtextCont h1{
+        width: 100%;
+    }
+
+    .postCont1 .posterCont .postText,
+    .postCont1 .posterCont .postImg,
+    .postCont2 .posterCont .postText,
+    .postCont2 .posterCont .postImg {
+        width: 100%;
+        padding: 50px;
+        user-select: none;
+        transition: all 0.5s;
+    }
 }
 
 @media(width<=750px) {
@@ -59,20 +92,49 @@
     .menuLinks li {
         padding: 5px 0 0 20px;
     }
+
     .heroCont .colorCont {
         display: none;
         /* position: ; */
     }
+
     .heroCont .rightContent,
     .heroCont .leftContent {
         position: unset;
         width: 80%;
     }
-    .heroCont{
+
+    .heroCont {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
         gap: 50px;
+    }
+
+    .postCont1 .brand h1,
+    .postCont2 .brand h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (width<=550px) {
+
+    .postCont1 .brand,
+    .postCont2 .brand {
+        padding: 40px 0;
+    }
+
+    .postCont1 .brand h1,
+    .postCont2 .brand h1 {
+        font-size: 1.4rem;
+    }
+
+    .postCont1 .brand p,
+    .postCont2 .brand p {
+        font-size: 1rem;
+    }
+    .headingCont .cardsCont .cards{
+        width: 100%;
     }
 }

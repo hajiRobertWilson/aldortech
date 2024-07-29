@@ -19,8 +19,8 @@
     --theme-border: white;
     --dropdown-link-border: black;
     --navBg: rgba(224, 247, 252, 1);
-    --text-color: black;
-    --link-color-hover: blue;
+    --theme-text-color: black;
+    --theme-hover-color: rgba(221, 220, 229, 1);
     --bg-color: rgb(221, 220, 229);
     --bg-gradient: linear-gradient(329deg, rgba(221, 220, 229, 1) 11%, rgba(231, 231, 233, 1) 34%, rgba(224, 247, 252, 1) 100%);
 }
@@ -36,8 +36,8 @@
     --nav-border: whitesmoke;
     --dropdown-link-border: white;
     --navBg: #000000;
-    --link-color-hover: #011F5B;
-    --text-color: white;
+    --theme-hover-color: #130f40;
+    --theme-text-color: white;
     --bg-color: #130f40;
     --bg-gradient: linear-gradient(315deg, #130f40 0%, #000000 74%);
 }
@@ -64,7 +64,7 @@ main {
     /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg4.jpg');
     background-position: center;
     background-size: cover; */
-    color: var(--text-color);
+    color: var(--theme-text-color);
     max-height: 100vh;
     overflow: scroll;
     padding-top: 100px;
@@ -133,7 +133,7 @@ main {
 }
 
 .menuLinks {
-    color: var(--text-color);
+    color: var(--theme-text-color);
     background-color: var(--navBg);
     max-height: 0;
     z-index: 100;
@@ -173,7 +173,7 @@ main {
     flex-flow: row nowrap;
     justify-content: space-between;
     width: 60%;
-    color: var(--text-color);
+    color: var(--theme-text-color);
     transition: all 0.5s;
 }
 
@@ -183,12 +183,12 @@ main {
 }
 
 .navContainer li:hover {
-    color: var(--link-color-hover);
+    color: var(--theme-hover-color);
     transition: all 0.5s;
 }
 
 .navContainer .logoContainer {
-    color: var(--text-color);
+    color: var(--theme-text-color);
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -208,14 +208,14 @@ main {
 }
 
 .navContainer .menuBtn:hover span {
-    background-color: var(--link-color-hover);
+    background-color: var(--theme-hover-color);
 }
 
 .navContainer .menuBtn span {
     width: 35px;
     height: 4px;
     border-radius: 2px;
-    background-color: var(--text-color);
+    background-color: var(--theme-text-color);
     transition: all 0.5s;
 }
 
@@ -295,9 +295,154 @@ main {
     text-align: center;
     padding: 12px 0;
     font-size: 1.2rem;
-    color: var(--text-color);
+    color: var(--theme-text-color);
     border-radius: 5px;
     user-select: none;
+}
+
+/*__________________ End _____________________ */
+
+/*_____________ Services Section _____________ */
+.postCont1,
+.postCont2 ,
+.headingCont{
+    background: var(--bg-gradient);
+    width: 100%;
+    margin-top: 150px;
+}
+
+.postCont1 .slideContent {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 1800px;
+    overflow: scroll;
+    border-bottom: 2px solid var(--theme-border);
+    border-top: 2px solid var(--theme-border);
+
+}
+
+.postCont1 .slideContent .slideServices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 30px;
+    user-select: none;
+    background-color: var(--bg-gradient);
+    color: var(--theme-text-color);
+    height: 50px;
+    min-width: fit-content;
+    transition: all 0.5s;
+}
+
+.postCont1 .slideContent .slideServices:hover {
+    background-color: var(--theme-hover-color);
+}
+
+.postCont1 .brand,
+.postCont2 .brand {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.postCont1 .brand h1,
+.postCont2 .brand h1 {
+    font-size: 2.5rem;
+    transition: all 0.5s;
+}
+
+.postCont1 .brand p,
+.postCont2 .brand p {
+    font-size: 1.2rem;
+}
+
+.postCont1 .posterCont {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    transition: all 0.5s;
+}
+
+.postCont2 .posterCont {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    transition: all 0.5s;
+}
+
+.postCont1 .posterCont .postText,
+.postCont1 .posterCont .postImg,
+.postCont2 .posterCont .postText,
+.postCont2 .posterCont .postImg {
+    width: 50%;
+    padding: 50px;
+    user-select: none;
+    transition: all 0.5s;
+}
+
+.postCont1 .posterCont .postText,
+.postCont2 .posterCont .postText {
+    font-size: 1.7rem;
+    text-align: justify;
+    color: var(--theme-text-color);
+    transition: all 0.5s;
+}
+
+.postCont1 .posterCont .postImg img,
+.postCont2 .posterCont .postImg img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/*__________________ End _____________________ */
+
+/*_____________ Headings Section _____________ */
+.headingCont{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.headingCont .boldtextCont{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 80px 0;
+}
+.headingCont .boldtextCont h1{
+    width: 50%;
+    font-size: 5rem;
+    font-weight: bold;
+}
+.headingCont .boldtextCont .paragraph{
+    width: 50%;
+    font-size: 2rem;
+    text-align: justify;
+}
+.headingCont .cardsCont{
+    display:flex;
+    flex-flow: row wrap;
+    /* gap:40px; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.headingCont .cardsCont .cards{
+    height: 200px;
+    width: 25%;
+    /* min-width:25%; */
+    padding: 50px;
+    background-color: blue;
+    color: white;
 }
 
 /*__________________ End _____________________ */

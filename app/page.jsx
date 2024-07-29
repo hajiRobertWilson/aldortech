@@ -6,6 +6,8 @@ import "./global.queries.css";
 import { useEffect } from "react";
 import HeroSection from "@/components/Hero";
 import Footer from "@/components/Footer";
+import ServiceSlider from "@/components/services";
+import Headings from "@/components/headings";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <main>
         {/* <h1>Home Page</h1> */}
         <HeroSection />
+        <ServiceSlider />
+        <Headings />
         <div style={{ height: '1000px', width: '100%' }}></div>
         <Footer />
       </main>
