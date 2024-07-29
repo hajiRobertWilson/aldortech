@@ -23,6 +23,7 @@
     --theme-hover-color: rgba(221, 220, 229, 1);
     --bg-color: rgb(221, 220, 229);
     --bg-gradient: linear-gradient(329deg, rgba(221, 220, 229, 1) 11%, rgba(231, 231, 233, 1) 34%, rgba(224, 247, 252, 1) 100%);
+    --theme-footer: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
 }
 
 /* ---------------------------------- End -------------------------------------- */
@@ -40,6 +41,7 @@
     --theme-text-color: white;
     --bg-color: #130f40;
     --bg-gradient: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    --theme-footer: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
 }
 
 /* ---------------------------------- End -------------------------------------- */
@@ -50,26 +52,17 @@ body {
     max-width: 1800px;
     min-width: 370px;
     background-repeat: no-repeat;
-    /* background-color: var(--bg-color); */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg4.jpg');
     background-position: center;
     background-size: cover;
-    /* height: 100vh; */
-    /* max-height: 90vh; */
-    /* overflow: scroll; */
-    /* position: relative; */
 }
 
 main {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg4.jpg');
-    background-position: center;
-    background-size: cover; */
     color: var(--theme-text-color);
     max-height: 100vh;
     overflow: scroll;
     padding-top: 100px;
     transition: all 0.5s;
-    /* position: absolute; */
 }
 
 /* ---------------------------------- End -------------------------------------- */
@@ -304,8 +297,10 @@ main {
 
 /*_____________ Services Section _____________ */
 .postCont1,
-.postCont2 ,
-.headingCont{
+.postCont2,
+.headingCont,
+.quikPort,
+.reviewCont {
     background: var(--bg-gradient);
     width: 100%;
     margin-top: 150px;
@@ -390,7 +385,7 @@ main {
 
 .postCont1 .posterCont .postText,
 .postCont2 .posterCont .postText {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-align: justify;
     color: var(--theme-text-color);
     transition: all 0.5s;
@@ -398,14 +393,15 @@ main {
 
 .postCont1 .posterCont .postImg img,
 .postCont2 .posterCont .postImg img {
-    width: 100%;
+    width: 75%;
+    margin: auto;
     border-radius: 5px;
 }
 
 /*__________________ End _____________________ */
 
 /*_____________ Headings Section _____________ */
-.headingCont{
+.headingCont {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -413,39 +409,309 @@ main {
     padding: 0 50px;
 }
 
-.headingCont .boldtextCont{
+.headingCont .boldtextCont {
     display: flex;
     flex-flow: row nowrap;
     padding: 80px 0;
 }
-.headingCont .boldtextCont h1{
-    width: 50%;
-    font-size: 5rem;
-    font-weight: bold;
-}
-.headingCont .boldtextCont .paragraph{
+
+.headingCont .boldtextCont h1 {
     width: 50%;
     font-size: 2rem;
+    font-weight: bold;
+}
+
+.headingCont .boldtextCont .paragraph {
+    width: 50%;
+    font-size: 1.5rem;
     text-align: justify;
 }
-.headingCont .cardsCont{
-    display:flex;
+
+.headingCont .cardsCont {
+    display: flex;
     flex-flow: row wrap;
-    /* gap:40px; */
+    gap: 40px;
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 40px 0 80px 0;
 }
-.headingCont .cardsCont .cards{
+
+.headingCont .cardsCont .cards {
     height: 200px;
-    width: 25%;
-    /* min-width:25%; */
+    width: 22%;
     padding: 50px;
-    background-color: blue;
+    background-color: var(--blue-1);
     color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.headingCont .logoCont {
+    width: 100%;
+    padding: 40px 0 80px 0;
+}
+
+.headingCont .logoCont img {
+    width: 100%;
+    height: 600px;
+    padding: 0 35px;
+
 }
 
 /*__________________ End _____________________ */
+
+/*_____________ Quik Portfolio _______________ */
+.quikPort {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.quikPort h1 {
+    font-size: 2rem;
+    padding: 50px 0;
+}
+
+.quikPort .portCardCont {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    padding: 40px 0 80px 0;
+}
+
+.quikPort .portCardCont .portCard {
+    height: 300px;
+    width: 22%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.quikPort .portCardCont .cardImg1,
+.quikPort .portCardCont .cardImg2,
+.quikPort .portCardCont .cardImg3 {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardImg1 {
+    background: url('../public/poster1.jpg');
+}
+
+.cardImg2 {
+    background: url('../public/poster2.jpg');
+}
+
+.cardImg3 {
+    background: url('../public/poster3.jpg');
+}
+
+.quikPort .portCardCont .cardImg1::before,
+.quikPort .portCardCont .cardImg2::before,
+.quikPort .portCardCont .cardImg3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+}
+
+.readmore {
+    background-color: var(--blue-1);
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    color: white;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.quikPort .portCardCont .cardImg1:hover .title,
+.quikPort .portCardCont .cardImg2:hover .title,
+.quikPort .portCardCont .cardImg3:hover .title,
+.quikPort .portCardCont .cardImg1:hover .readmore,
+.quikPort .portCardCont .cardImg2:hover .readmore,
+.quikPort .portCardCont .cardImg3:hover .readmore,
+.quikPort .portCardCont .cardImg1:hover::before,
+.quikPort .portCardCont .cardImg2:hover::before,
+.quikPort .portCardCont .cardImg3:hover::before {
+    opacity: 1;
+}
+
+.quikPort .portCardCont .redirectCard {
+    background-color: var(--blue-1);
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: relative;
+}
+
+.quikPort .portCardCont .redirectCard h3 {
+    font-size: 1.5rem;
+    padding: 20px 15px;
+}
+
+.quikPort .portCardCont .redirectCard button {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 70px;
+    background-color: #130f40;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/*__________________ End _____________________ */
+
+/*_____________ Reviews Section ______________ */
+.reviewCont {
+    padding: 60px 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.reviewCont h1 {
+    font-size: 2rem;
+}
+
+.reviewCont .reviewCardCont {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 60px;
+}
+
+.reviewCont .reviewCardCont .reviewCard {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    width: 48%;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--blue-1);
+    transition: all 0.5s;
+}
+
+.reviewCont .reviewCardCont .reviewCard .time {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviewCont .reviewCardCont .reviewCard .text {
+    text-align: justify;
+    font-size: large;
+}
+
+.reviewCont .reviewCardCont .reviewCard .avatar {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+.reviewCont .reviewCardCont .reviewCard .avatar img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.reviewCont .reviewCardCont .reviewCard .avatar h3 {
+    font-size: larger;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/*__________________ End _____________________ */
+
+/* ---------------------------------- End -------------------------------------- */
+/*          --------------------------===-----------------------------           */
+/* -------------------------------- Footer ------------------------------------- */
+
+.footerCont {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 150px;
+    /* height: 400px; */
+    background: var(--theme-footer);
+    color: white;
+    justify-content: space-between;
+}
+
+.footerCont .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    color: var(--theme-text-color);
+    max-width: 1800px;
+    /* gap: 80px; */
+}
+
+.footerCont .container .quiklinks,
+.footerCont .container .navigation,
+.footerCont .container .brandLogo {
+    width: 30%;
+    padding-top: 50px;
+    text-align: center;
+}
+.footerCont .container .brandLogo {
+    display: flex;
+    flex-flow: column;
+    /* gap: 5px; */
+}
+.footerCont .container .brandLogo h1{
+    font-size: 2.5rem;
+}
+.footerCont .container .brandLogo .email h1{
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.footerCont .container .quiklinks li,
+.footerCont .container .navigation li{
+    /* text-align: center; */
+    /* margin: auto; */
+    padding: 0 80px 0;
+    font-size: 1.5rem;
+    cursor:pointer;
+}
+
+.footerCont .copyright {
+    border-top: 2px solid var(--nav-border);
+    color: var(--theme-text-color);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 5px 0;
+
+}
+
 
 /* ---------------------------------- End -------------------------------------- */
 /*          --------------------------===-----------------------------           */

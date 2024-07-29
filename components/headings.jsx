@@ -14,7 +14,9 @@ export default function Headings() {
                         cards.map(card=><div key={card} className="cards">card</div>)
                     }
                 </div>
-                <div className="logoCont"></div>
+                <div className="logoCont">
+                    <img src="/poster4.png" alt="Poster3" />
+                </div>
             </div>
         </>
     )
