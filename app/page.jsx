@@ -8,6 +8,9 @@ import HeroSection from "@/components/Hero";
 import Footer from "@/components/Footer";
 import ServiceSlider from "@/components/services";
 import Headings from "@/components/headings";
+import QuikPort from "@/components/quikPortfolio";
+import QuikBlogs from "@/components/quikBlogs";
+import Reviews from "@/components/reviews";
 
 export default function Home() {
   return (
@@ -17,7 +20,9 @@ export default function Home() {
         <HeroSection />
         <ServiceSlider />
         <Headings />
-        <div style={{ height: '1000px', width: '100%' }}></div>
+        <QuikPort />
+        <Reviews />
+        <QuikBlogs />
         <Footer />
       </main>
     </>

@@ -31,8 +31,10 @@
         max-height: 350px;
         overflow: scroll;
     }
-    .headingCont .cardsCont .cards{
-        width: 50%;
+
+    .quikPort .portCardCont .portCard,
+    .headingCont .cardsCont .cards {
+        width: 47%;
     }
 }
 
@@ -64,11 +66,13 @@
         flex-flow: column-reverse;
         transition: all 0.5s;
     }
-    .headingCont .boldtextCont{
+
+    .headingCont .boldtextCont {
         flex-flow: column nowrap;
     }
+
     .headingCont .boldtextCont .paragraph,
-    .headingCont .boldtextCont h1{
+    .headingCont .boldtextCont h1 {
         width: 100%;
     }
 
@@ -81,9 +85,25 @@
         user-select: none;
         transition: all 0.5s;
     }
+
+    .headingCont .logoCont img {
+        height: auto;
+        padding: 0;
+    }
+
+    .footerCont .container .quiklinks {
+        width: 100%;
+        text-align: left;
+    }
+
+    .footerCont .container .navigation,
+    .footerCont .container .brandLogo {
+        width: 48%;
+        text-align: left;
+    }
 }
 
-@media(width<=750px) {
+@media(width<=770px) {
     .navContainer {
         padding: 5px 20px;
         transition: all 0.5s;
@@ -116,6 +136,16 @@
     .postCont2 .brand h1 {
         font-size: 2rem;
     }
+
+    .quikPort .portCardCont .portCard,
+    .headingCont .cardsCont .cards,
+    .reviewCont .reviewCardCont .reviewCard {
+        width: 100%;
+    }
+
+    .reviewCont .reviewCardCont {
+        flex-flow: column nowrap;
+    }
 }
 
 @media (width<=550px) {
@@ -134,7 +164,12 @@
     .postCont2 .brand p {
         font-size: 1rem;
     }
-    .headingCont .cardsCont .cards{
+
+    .footerCont .container .quiklinks,
+    .footerCont .container .navigation,
+    .footerCont .container .brandLogo {
         width: 100%;
+        text-align: left;
     }
+
 }
