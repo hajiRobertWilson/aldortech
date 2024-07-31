@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   const links = ['Home', 'Services', 'Portfolio', 'Blogs', 'About Us', 'Contact'];
-  const quikLinks = ['Lorem', 'Lorem', 'Lorem', 'Lorem', 'Lorem', 'Lorem', 'Lorem',]
+  const quikLinks = ['Lorem1', 'Lorem2', 'Lorem3', 'Lorem4', 'Lorem5', 'Lorem6', 'Lorem7',]
   const handleMail = () => {
     window.open('mailto:info@aldortech.com')
   }

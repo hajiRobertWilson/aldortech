@@ -42,7 +42,7 @@ export default function ServiceSlider() {
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum magnam quos dolorem animi! Dolorum dicta repellendus nesciunt quasi numquam non, culpa pariatur laboriosam molestias odio omnis quo tenetur similique fuga.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, iure, nemo, eos voluptatem accusantium voluptates minima earum nobis possimus expedita eaque veniam ut velit facilis aliquid eveniet! Alias, sunt cum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem explicabo deserunt consectetur, non recusandae unde iste id sequi similique quaerat quo aut iusto ab saepe nisi? Tenetur saepe et soluta!
                     </div>
                     <div className="postImg">
-                        <Image src="/poster2.jpg" alt="Poster 1" width={500} height={500} />
+                        <Image src="/poster2.webp" alt="Poster 1" width={500} height={500} />
                     </div>
                 </div>
             </div>

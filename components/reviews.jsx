@@ -23,7 +23,7 @@ export default function Reviews() {
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident corporis omnis facilis minima dolorem est, nobis modi odit cum nulla, accusamus aliquam. Est, enim distinctio? Earum ab omnis illo sunt.
                         </div>
                         <div className="avatar">
-                            <img src="/avatar1.png" alt="Avatar" />
+                            <img src="/avatar1.webp" alt="Avatar" />
                             <div>
                                 <h3>Ray Robertson</h3>
                                 <p>CEO Company</p>
@@ -45,7 +45,7 @@ export default function Reviews() {
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident corporis omnis facilis minima dolorem est, nobis modi odit cum nulla, accusamus aliquam. Est, enim distinctio? Earum ab omnis illo sunt.
                         </div>
                         <div className="avatar">
-                            <img src="/avatar2.png" alt="Avatar" />
+                            <img src="/avatar2.webp" alt="Avatar" />
                             <div>
                                 <h3>John Doe</h3>
                                 <p>CEO Company</p>

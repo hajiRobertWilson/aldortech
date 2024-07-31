@@ -26,6 +26,21 @@
     --theme-footer: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+
 /* ---------------------------------- End -------------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* ---------------------------- Dark Theme Styles ------------------------------ */
@@ -52,15 +67,17 @@ body {
     max-width: 1800px;
     min-width: 370px;
     background-repeat: no-repeat;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg4.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg.webp');
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
 
 main {
     color: var(--theme-text-color);
     max-height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     padding-top: 100px;
     transition: all 0.5s;
 }
@@ -310,7 +327,8 @@ main {
     display: flex;
     flex-flow: row nowrap;
     max-width: 1800px;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     border-bottom: 2px solid var(--theme-border);
     border-top: 2px solid var(--theme-border);
 
@@ -387,6 +405,7 @@ main {
 .postCont2 .posterCont .postText {
     font-size: 1.3rem;
     text-align: justify;
+    /* overflow: hidden; */
     color: var(--theme-text-color);
     transition: all 0.5s;
 }
@@ -454,9 +473,8 @@ main {
 
 .headingCont .logoCont img {
     width: 100%;
-    height: 600px;
+    /* height: 600px; */
     padding: 0 35px;
-
 }
 
 /*__________________ End _____________________ */
@@ -503,15 +521,15 @@ main {
 }
 
 .cardImg1 {
-    background: url('../public/poster1.jpg');
+    background: url('../public/poster1.webp');
 }
 
 .cardImg2 {
-    background: url('../public/poster2.jpg');
+    background: url('../public/poster2.webp');
 }
 
 .cardImg3 {
-    background: url('../public/poster3.jpg');
+    background: url('../public/poster3.webp');
 }
 
 .quikPort .portCardCont .cardImg1::before,
@@ -682,25 +700,29 @@ main {
     padding-top: 50px;
     text-align: center;
 }
+
 .footerCont .container .brandLogo {
     display: flex;
     flex-flow: column;
     /* gap: 5px; */
 }
-.footerCont .container .brandLogo h1{
+
+.footerCont .container .brandLogo h1 {
     font-size: 2.5rem;
 }
-.footerCont .container .brandLogo .email h1{
+
+.footerCont .container .brandLogo .email h1 {
     cursor: pointer;
     font-size: 1.3rem;
 }
+
 .footerCont .container .quiklinks li,
-.footerCont .container .navigation li{
+.footerCont .container .navigation li {
     /* text-align: center; */
     /* margin: auto; */
     padding: 0 80px 0;
     font-size: 1.5rem;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .footerCont .copyright {

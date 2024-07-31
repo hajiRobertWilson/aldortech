@@ -1,7 +1,7 @@
 "use client"
 
 export default function Headings() {
-    let cards=[1,2,3,4,5,6,7,8]
+    let cards = [1, 2, 3, 4, 5, 6, 7, 8]
     return (
         <>
             <div className="headingCont">
@@ -11,11 +11,11 @@ export default function Headings() {
                 </div>
                 <div className="cardsCont">
                     {
-                        cards.map(card=><div key={card} className="cards">card</div>)
+                        cards.map(card => <div key={card} className="cards">card</div>)
                     }
                 </div>
                 <div className="logoCont">
-                    <img src="/poster4.png" alt="Poster3" />
+                    <img src="/poster4.webp" alt="Poster3" />
                 </div>
             </div>
         </>
