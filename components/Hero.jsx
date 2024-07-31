@@ -29,7 +29,7 @@ export default function HeroSection() {
                 </div>
                 <div className="rightContent">
                     <div className="btnCont">
-                        <Link href='/' onClick={() => { handleTab() }}>Contact US</Link>
+                        <Link href='/contact' onClick={() => { handleTab() }}>Contact US</Link>
                         <Link href='/'>Make a qoute!</Link>
                     </div>
                 </div>

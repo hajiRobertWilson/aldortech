@@ -1,6 +1,7 @@
 // ------------- Contact Page -----------------//
 import "../globals.css";
 import "../global.queries.css";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: 'Contact | Aldor Technologies',
@@ -11,7 +12,12 @@ export default function Contact() {
   return (
     <>
       <main>
-        <h1>Contact Page</h1>
+        <div>
+          <div style={{ backgroundColor: 'red', width: '100%', height: '100vh' }}>
+            <h1 style={{ fontSize: '5rem' }}>Contact Page</h1>
+          </div>
+        </div>
+        <Footer />
       </main>
     </>
   );

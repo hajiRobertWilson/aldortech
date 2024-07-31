@@ -1,6 +1,7 @@
 // ------------- Services Page -----------------//
 import "../globals.css";
 import "../global.queries.css";
+import Footer from "@/components/Footer";
 
 export const metadata = {
     title: 'Services | Aldor Technologies',
@@ -11,7 +12,12 @@ export default function Services() {
     return (
         <>
             <main>
-                <h1>Services Page</h1>
+                <div>
+                    <div style={{ backgroundColor: 'red', width: '100%', height: '100vh' }}>
+                        <h1 style={{fontSize:'5rem'}}>Services Page</h1>
+                    </div>
+                </div>
+                <Footer />
             </main>
         </>
     );
