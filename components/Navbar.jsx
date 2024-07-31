@@ -1,8 +1,8 @@
 "use client"
-import tabHandler from "@/stateLib";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -11,9 +11,10 @@ export default function Navbar() {
     const index = [0, 1, 2, 3, 4, 5];
     const [menuElement, setMenuElement] = useState();
     const [theme, setTheme] = useState('light')
-    const [activeTab, setActiveTab] = useState('Home')
     const [dropdownBtn, setDropdownBtn] = useState();
     const [windowWidth, setWindowWidth] = useState();
+    const pathName = usePathname()
+
 
     const handleMenu = () => {
         dropdownBtn.classList.toggle('open')
@@ -25,19 +26,14 @@ export default function Navbar() {
         }
         menuElement.classList.toggle('show')
     }
-    const handleTab = (ind) => {
-        setActiveTab(links[ind])
-    }
 
 
     useEffect(() => {
         setDropdownBtn(document.getElementById('barBtn'));
-        // setActiveTab((tabHandler.Tab !== 'Home') ? tabHandler.Tab : 'Home')
-        // tabHandler.Temp(setActiveTab)
-
 
         // ---Tab Handler and active tab functionallity---//
         const root = document.documentElement;
+        let activeTab = pathName;
         const navItem = document.querySelectorAll('.navLink')
         const menulinks = document.querySelector('.menuLinks')
         setMenuElement(menulinks)
@@ -86,7 +82,7 @@ export default function Navbar() {
             window.removeEventListener("resize", handleWindow)
             themebtn.removeEventListener('click', toggler);
         }
-    }, [theme, activeTab, windowWidth])
+    }, [theme, pathName, windowWidth])
 
     return (
         <>
@@ -102,7 +98,7 @@ export default function Navbar() {
                     </div>
                     <ul>
                         {
-                            index.map(i => <li className="navLink" key={i} data-value={links[i]} onClick={() => handleTab(i)}><Link href={path[i]}>{links[i]}</Link></li>)
+                            index.map(i => <Link href={path[i]} className="navLink" key={i} data-value={path[i]} ><li >{links[i]}</li></Link>)
                         }
                     </ul>
                     <div id="barBtn" onClick={() => handleMenu()} className="menuBtn">
@@ -114,8 +110,7 @@ export default function Navbar() {
                 <div className="menuLinks">
                     <ul>
                         {
-                            index.map(i => <Link key={i} href={path[i]}><li className="navLink" data-value={links[i]} onClick={() => {
-                                handleTab(i);
+                            index.map(i => <Link key={i} href={path[i]}><li className="navLink" data-value={path[i]} onClick={() => {
                                 handleMenuList();
                             }}>{links[i]}</li></Link>)
                         }
