@@ -1,26 +1,44 @@
 "use client"
 
+import Link from "next/link"
+
 export default function QuikBlogs() {
     return (
         <>
-            <div className="quikPort">
+            <div className="quikBlog">
                 <h1>Blogs</h1>
-                <div className="portCardCont">
-                    <div className="portCard cardImg1">
-                        <p className="title">Blogs</p>
-                        <button title="Read" className="readmore">Read</button>
+                <div className="blogCardCont">
+                    <div className="blogCard">
+                        <div className="imgContainer">
+                            <div className="img" style={{ backgroundImage: "url('/poster2.webp')" }}></div>
+                        </div>
+                        <h3>Heading text</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi dolores nobis explicabo tenetur sint tempora in</p>
+                        <Link href='/'>Read More</Link>
                     </div>
-                    <div className="portCard cardImg2">
-                        <p className="title">Blogs</p>
-                        <button title="Read" className="readmore">Read</button>
+                    <div className="blogCard">
+                        <div className="imgContainer">
+                            <div className="img" style={{ backgroundImage: "url('/poster3.webp')" }}></div>
+                        </div>
+                        <h3>Heading text</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi dolores nobis explicabo tenetur sint tempora in</p>
+                        <Link href='/'>Read More</Link>
                     </div>
-                    <div className="portCard cardImg3">
-                        <p className="title">Blogs</p>
-                        <button title="Read" className="readmore">Read</button>
+                    <div className="blogCard">
+                        <div className="imgContainer">
+                            <div className="img" style={{ backgroundImage: "url('/poster1.webp')" }}></div>
+                        </div>
+                        <h3>Heading text</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi dolores nobis explicabo tenetur sint tempora in</p>
+                        <Link href='/'>Read More</Link>
                     </div>
-                    <div className="portCard redirectCard">
-                        <h3>Click on Load more button to read our lates blogs!</h3>
-                        <button type="button">Load More</button>
+                    <div className="blogCard">
+                        <div className="imgContainer">
+                            <div className="img" style={{ backgroundImage: "url('/poster2.webp')" }}></div>
+                        </div>
+                        <h3>Heading text</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi dolores nobis explicabo tenetur sint tempora in</p>
+                        <Link href='/'>Read More</Link>
                     </div>
                 </div>
             </div>

@@ -25,8 +25,10 @@ export default function Footer() {
     const theme = document.documentElement.classList.contains('dark-theme');
     navItem.forEach(ele => {
       ele.style.color = !theme ? 'black' : 'white';
+      ele.style.fontWeight = 'normal'
       if (ele.dataset.value === activeTab) {
-        ele.style.color = 'blue'
+        ele.style.color = '#1679AB'
+        ele.style.fontWeight = 'bold'
       }
     })
   }, [pathName])

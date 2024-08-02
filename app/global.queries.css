@@ -31,7 +31,16 @@
         max-height: 350px;
         overflow-y: scroll;
     }
+    .quikBlog .blogCardCont .blogCard{
+        padding-bottom: 50px;
+    }
 
+    .quikBlog .blogCardCont .blogCard .imgContainer .img {
+        /* width: 47%; */
+        height: 400px;
+    }
+
+    .quikBlog .blogCardCont .blogCard,
     .quikPort .portCardCont .portCard,
     .headingCont .cardsCont .cards {
         width: 47%;
@@ -142,6 +151,7 @@
         font-size: 2rem;
     }
 
+    .quikBlog .blogCardCont .blogCard,
     .quikPort .portCardCont .portCard,
     .headingCont .cardsCont .cards,
     .reviewCont .reviewCardCont .reviewCard {

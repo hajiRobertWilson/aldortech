@@ -20,7 +20,7 @@
     --dropdown-link-border: black;
     --navBg: rgba(224, 247, 252, 1);
     --theme-text-color: black;
-    --theme-hover-color: rgba(221, 220, 229, 1);
+    --theme-hover-color: #1679AB;
     --bg-color: rgb(221, 220, 229);
     --bg-gradient: linear-gradient(329deg, rgba(221, 220, 229, 1) 11%, rgba(231, 231, 233, 1) 34%, rgba(224, 247, 252, 1) 100%);
     --theme-footer: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
@@ -52,7 +52,7 @@
     --nav-border: whitesmoke;
     --dropdown-link-border: white;
     --navBg: #000000;
-    --theme-hover-color: #130f40;
+    --theme-hover-color: #1679AB;
     --theme-text-color: white;
     --bg-color: #130f40;
     --bg-gradient: linear-gradient(315deg, #130f40 0%, #000000 74%);
@@ -321,6 +321,7 @@ main {
 .postCont2,
 .headingCont,
 .quikPort,
+.quikBlog,
 .reviewCont {
     background: var(--bg-gradient);
     width: 100%;
@@ -508,7 +509,8 @@ main {
 }
 
 .quikPort .portCardCont .portCard {
-    height: 300px;
+    min-height: 300px;
+    height: 100%;
     width: 22%;
     border-radius: 5px;
     cursor: pointer;
@@ -608,6 +610,81 @@ main {
     background-color: #130f40;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+/*__________________ End _____________________ */
+
+/*______________ Quik Blogs __________________ */
+.quikBlog {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.quikBlog h1 {
+    font-size: 2rem;
+    padding: 50px 0;
+}
+
+.quikBlog .blogCardCont {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    padding: 40px 0 80px 0;
+}
+
+.quikBlog .blogCardCont .blogCard {
+    min-height: 300px;
+    height: 100%;
+    width: 22%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.quikBlog .blogCardCont .blogCard h3 {
+    padding-top: 50px;
+    font-size: 1.5rem;
+    color: var(--blue-1);
+    font-weight: bold;
+}
+
+.quikBlog .blogCardCont .blogCard p {
+    font-size: larger;
+    text-align: justify;
+    /* padding-top: 20px; */
+}
+
+.quikBlog .blogCardCont .blogCard a {
+    color: var(--blue-1);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.quikBlog .blogCardCont .blogCard .imgContainer {
+    padding: 7px;
+    background-color: var(--blue-1);
+    border-radius: 10px;
+    cursor: unset;
+}
+
+.quikBlog .blogCardCont .blogCard .imgContainer .img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    border-radius: 10px;
+    transform: rotate(-10deg);
+    transition: all 0.5s;
+}
+
+.quikBlog .blogCardCont .blogCard:hover .imgContainer .img {
+    transform: rotate(0);
 }
 
 /*__________________ End _____________________ */
