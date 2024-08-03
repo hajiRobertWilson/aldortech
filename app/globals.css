@@ -24,6 +24,7 @@
     --bg-color: rgb(221, 220, 229);
     --bg-gradient: linear-gradient(329deg, rgba(221, 220, 229, 1) 11%, rgba(231, 231, 233, 1) 34%, rgba(224, 247, 252, 1) 100%);
     --theme-footer: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
+    --theme-shadow-color: 10px 10px 71px -8px rgba(0, 0, 0, 0.75);
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +42,7 @@
 }
 
 
-/* ---------------------------------- End -------------------------------------- */
+/* ----------------------------- --- Root End ---------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* ---------------------------- Dark Theme Styles ------------------------------ */
 .dark-theme {
@@ -57,9 +58,10 @@
     --bg-color: #130f40;
     --bg-gradient: linear-gradient(315deg, #130f40 0%, #000000 74%);
     --theme-footer: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+    --theme-shadow-color: -2px 2px 47px -6px rgba(237, 230, 237, 0.62);
 }
 
-/* ---------------------------------- End -------------------------------------- */
+/* ---------------------------- Dark Theme End --------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* ---------------------------- Global Styles ---------------------------------- */
 body {
@@ -86,9 +88,119 @@ main {
     transition: all 0.5s;
 }
 
-/* ---------------------------------- End -------------------------------------- */
+.globalBG {
+    background: var(--bg-gradient);
+    width: 100%;
+    margin-top: 150px;
+}
+
+/* _________________ Blog Card Styles ______________________ */
+.blogCard {
+    min-height: 300px;
+    height: 100%;
+    width: 22%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.blogCard h3 {
+    padding-top: 50px;
+    font-size: 1.5rem;
+    color: var(--blue-1);
+    font-weight: bold;
+}
+
+.blogCard p {
+    font-size: larger;
+    text-align: justify;
+}
+
+.blogCard a {
+    color: var(--blue-1);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.blogCard .imgContainer {
+    padding: 7px;
+    background-color: var(--blue-1);
+    border-radius: 10px;
+    cursor: unset;
+}
+
+.blogCard .imgContainer .img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    border-radius: 10px;
+    transform: rotate(-10deg);
+    transition: all 0.5s;
+}
+
+.blogCard:hover .imgContainer .img {
+    transform: rotate(0);
+}
+
+/* _________________ Blog Card End ______________________ */
+
+/* _______________ Indus Card Styles ____________________ */
+.indCard {
+    width: 22%;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid var(--blue-1);
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.indCard p {
+    font-size: 1.5rem;
+}
+
+.indCard img {
+    width: 50px;
+}
+
+/* ________________ Indus Card End ______________________ */
+/* _____________ Service Card Styles ____________________ */
+.serviceCard {
+    width: 28%;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.5s;
+    padding: 40px;
+    box-shadow: var(--theme-shadow-color);
+}
+
+.serviceCard img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.serviceCard h2 {
+    font-size: 1.8rem;
+    color: var(--blue-1);
+}
+
+.serviceCard p {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* ________________ Service Card End ______________________ */
+/* --------------------------- Global Styles End ------------------------------- */
 /*          --------------------------===-----------------------------           */
-/* -------------------------------- Toolbar ------------------------------------ */
+/* ---------------------------- Toolbar Section -------------------------------- */
 .toolBarCont {
     height: 35px;
     width: 100%;
@@ -131,9 +243,9 @@ main {
     left: 30px;
 }
 
-/* ---------------------------------- End -------------------------------------- */
+/* ----------------------------- Toolbar End ----------------------------------- */
 /*          --------------------------===-----------------------------           */
-/* --------------------------------- Navbar ------------------------------------ */
+/* ---------------------------- Navbar Section --------------------------------- */
 .navBar {
     position: fixed;
     display: flex;
@@ -245,7 +357,7 @@ main {
     transform: rotate(-45deg) translate(10px, -4px);
 }
 
-/* ---------------------------------- End -------------------------------------- */
+/* ------------------------------- Navbar End ---------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* ------------------------------- Home Page ----------------------------------- */
 
@@ -314,7 +426,7 @@ main {
     user-select: none;
 }
 
-/*__________________ End _____________________ */
+/*________________ Hero End __________________ */
 
 /*_____________ Services Section _____________ */
 .postCont1,
@@ -422,7 +534,7 @@ main {
     border-radius: 5px;
 }
 
-/*__________________ End _____________________ */
+/*_______________ Services End ________________ */
 
 /*_____________ Headings Section _____________ */
 .headingCont {
@@ -482,7 +594,7 @@ main {
     padding: 0 35px;
 }
 
-/*__________________ End _____________________ */
+/*______________ Headings End _________________ */
 
 /*_____________ Quik Portfolio _______________ */
 .quikPort {
@@ -612,7 +724,7 @@ main {
     border-bottom-right-radius: 5px;
 }
 
-/*__________________ End _____________________ */
+/*_____________ Quik Port End _________________ */
 
 /*______________ Quik Blogs __________________ */
 .quikBlog {
@@ -638,56 +750,7 @@ main {
     padding: 40px 0 80px 0;
 }
 
-.quikBlog .blogCardCont .blogCard {
-    min-height: 300px;
-    height: 100%;
-    width: 22%;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-.quikBlog .blogCardCont .blogCard h3 {
-    padding-top: 50px;
-    font-size: 1.5rem;
-    color: var(--blue-1);
-    font-weight: bold;
-}
-
-.quikBlog .blogCardCont .blogCard p {
-    font-size: larger;
-    text-align: justify;
-    /* padding-top: 20px; */
-}
-
-.quikBlog .blogCardCont .blogCard a {
-    color: var(--blue-1);
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.quikBlog .blogCardCont .blogCard .imgContainer {
-    padding: 7px;
-    background-color: var(--blue-1);
-    border-radius: 10px;
-    cursor: unset;
-}
-
-.quikBlog .blogCardCont .blogCard .imgContainer .img {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200px;
-    border-radius: 10px;
-    transform: rotate(-10deg);
-    transition: all 0.5s;
-}
-
-.quikBlog .blogCardCont .blogCard:hover .imgContainer .img {
-    transform: rotate(0);
-}
-
-/*__________________ End _____________________ */
+/*______________ Quik Blog End ________________ */
 
 /*_____________ Reviews Section ______________ */
 .reviewCont {
@@ -749,9 +812,198 @@ main {
     padding-top: 10px;
 }
 
-/*__________________ End _____________________ */
+/*__________________ Reviews End _____________________ */
 
-/* ---------------------------------- End -------------------------------------- */
+/* ------------------------------- Hoome End ----------------------------------- */
+/*          --------------------------===-----------------------------           */
+/* ------------------------------- Blogs Pge ----------------------------------- */
+.blogPage .headingCont {
+    background: var(--bg-gradient);
+    width: 100%;
+    margin-top: 0px;
+    padding: 50px 0;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.blogPage .headingCont h1 {
+    font-size: 2.5rem;
+    color: var(--blue-1);
+    font-weight: bolder;
+}
+
+.blogPage .headingCont h2 {
+    font-size: 3.5rem;
+    color: var(--theme-text-color);
+    font-weight: bolder;
+}
+
+.blogPage .blogsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    padding: 40px 0 80px 0;
+}
+
+
+/* ------------------------------- Blogs End ----------------------------------- */
+/*          --------------------------===-----------------------------           */
+/* ----------------------------- Services Page --------------------------------- */
+.servicePage .posterCont {
+    background: var(--bg-gradient);
+    width: 100%;
+    padding: 50px 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    gap: 50px;
+}
+
+.servicePage .posterCont .imgCont {
+    width: 47%;
+    transition: all 0.5s;
+}
+
+.servicePage .posterCont .imgCont .img {
+    padding: 10px;
+    background-color: var(--blue-1);
+    margin: auto;
+    border-radius: 10px;
+}
+
+.servicePage .posterCont .imgCont .img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.servicePage .posterCont .text {
+    width: 47%;
+    transition: all 0.5s;
+}
+
+.servicePage .posterCont .text h1 {
+    font-size: 3rem;
+    color: var(--blue-1);
+    transition: all 0.5s;
+}
+
+.servicePage .posterCont .text p {
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.servicePage .promise {
+    text-align: center;
+    padding: 50px 50px;
+}
+
+.servicePage .industryCont h2,
+.servicePage .promise h2 {
+    font-size: 2.3rem;
+    color: var(--blue-1);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.servicePage .promise p {
+    font-size: 1.4rem;
+    width: 50%;
+    margin: auto;
+    transition: all 0.5s;
+}
+
+.servicePage .industryCont {
+    padding: 50px;
+}
+
+.servicePage .industryCont h3 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.servicePage .industryCont .indCardCont {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.servicePage .serviceCont {
+    padding: 50px;
+}
+
+.servicePage .serviceCont h1 {
+    font-size: 2.3rem;
+    color: var(--blue-1);
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+.servicePage .serviceCont .serviceCardCont {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.servicePage .serviceCont .btnCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.servicePage .serviceCont .btnCont a {
+    height: 50px;
+    width: 300px;
+    font-size: 1.2rem;
+    background-color: var(--blue-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: all 0.5s;
+
+}
+
+.servicePage .serviceCont .btnCont a:hover {
+    border-radius: 10px;
+}
+
+.servicePage .whyUsCont {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+.servicePage .whyUsCont h1 {
+    font-size: 2rem;
+    color: var(--blue-1);
+    font-weight: bolder;
+}
+
+.servicePage .whyUsCont p {
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 0 60px;
+}
+
+/* --------------------------- Services Page End ------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* -------------------------------- Footer ------------------------------------- */
 
@@ -816,5 +1068,5 @@ main {
 }
 
 
-/* ---------------------------------- End -------------------------------------- */
+/* ------------------------------- Footer End ---------------------------------- */
 /*          --------------------------===-----------------------------           */

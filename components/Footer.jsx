@@ -1,6 +1,6 @@
 "use client"
 
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,6 +17,9 @@ export default function Footer() {
 
   const handleMail = () => {
     window.open('mailto:info@aldortech.com')
+  }
+  const handlePhone=()=>{
+    
   }
 
   useEffect(() => {
@@ -43,6 +46,7 @@ export default function Footer() {
             </div>
             <div className="email">
               <h1 onClick={() => handleMail()}><FontAwesomeIcon icon={faEnvelope} /> info@aldortech.com</h1>
+              <h1><FontAwesomeIcon icon={faPhone} />+44(12)34567890</h1>
             </div>
           </div>
           <div className="navigation">
@@ -61,7 +65,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="copyright">
-          Copyright <strong>&copy;</strong> 2024 Aldor Technologies Pvt,Ltd. All Rights Reserved.
+          Copyright <strong>&copy;</strong> 2024 Aldor Technologies Ltd. All Rights Reserved.
         </div>
       </div>
     </>

@@ -31,19 +31,22 @@
         max-height: 350px;
         overflow-y: scroll;
     }
-    .quikBlog .blogCardCont .blogCard{
+
+    .blogCard {
         padding-bottom: 50px;
     }
 
-    .quikBlog .blogCardCont .blogCard .imgContainer .img {
-        /* width: 47%; */
+    .blogCard .imgContainer .img {
         height: 400px;
     }
-
-    .quikBlog .blogCardCont .blogCard,
+    .indCard,
+    .blogCard,
     .quikPort .portCardCont .portCard,
     .headingCont .cardsCont .cards {
         width: 47%;
+    }
+    .servicePage .promise p{
+        width: 80%;
     }
 }
 
@@ -105,6 +108,23 @@
         padding: 0;
     }
 
+    .blogCard .imgContainer .img {
+        height: 300px;
+    }
+
+    .servicePage .posterCont {
+        flex-flow: column-reverse;
+    }
+    .servicePage .posterCont .text,
+    .servicePage .posterCont .imgCont{
+        width: 100%;
+    }
+    .serviceCard{
+        width: 45%;
+    }
+    .servicePage .serviceCont .serviceCardCont{
+        flex-flow: row wrap;
+    }
     .footerCont .container .quiklinks {
         width: 100%;
         text-align: left;
@@ -151,7 +171,7 @@
         font-size: 2rem;
     }
 
-    .quikBlog .blogCardCont .blogCard,
+    .blogCard,
     .quikPort .portCardCont .portCard,
     .headingCont .cardsCont .cards,
     .reviewCont .reviewCardCont .reviewCard {
@@ -161,9 +181,22 @@
     .reviewCont .reviewCardCont {
         flex-flow: column nowrap;
     }
+
+    .blogCard .imgContainer .img {
+        height: 450px;
+    }
+    .serviceCard{
+        width: 80%;
+    }
+    .servicePage .whyUsCont p{
+        padding: 0;
+    }
 }
 
 @media (width<=550px) {
+    .blogCard .imgContainer .img {
+        height: 300px;
+    }
 
     .postCont1 .brand,
     .postCont2 .brand {
@@ -178,6 +211,16 @@
     .postCont1 .brand p,
     .postCont2 .brand p {
         font-size: 1rem;
+    }
+    .servicePage .posterCont .text h1{
+        font-size: 2rem;
+    }
+    .servicePage .promise h2{
+        font-size: 1.5rem;
+    }
+    .serviceCard,
+    .indCard{
+        width: 100%;
     }
 
     .footerCont .container .quiklinks,

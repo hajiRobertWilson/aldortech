@@ -2,6 +2,8 @@
 import "../globals.css";
 import "../global.queries.css";
 import Footer from "@/components/Footer";
+import Link from "next/link";
+import BlogCard from "@/components/blogCard";
 
 export const metadata = {
     title: 'Blogs | Aldor Technologies',
@@ -12,9 +14,22 @@ export default function Blogs() {
     return (
         <>
             <main>
-                <div>
-                    <div style={{ backgroundColor: 'red', width: '100%', height: '100vh' }}>
-                        <h1 style={{fontSize:'5rem'}}>Blogs Page</h1>
+                <div className="blogPage">
+                    <div className="headingCont">
+                        <h1>Our New Blogs</h1>
+                        <h2>Latest New Blogs</h2>
+                    </div>
+                    <div className="globalBG blogsContainer">
+                        <BlogCard/>
+                        <BlogCard/>
+                        <BlogCard/>
+                        <BlogCard/>
+                        <BlogCard/>
+                        <BlogCard/>
+                        <BlogCard/>
+                        <BlogCard/>
+                        <BlogCard/>
+                        <BlogCard/>
                     </div>
                 </div>
                 <Footer />
