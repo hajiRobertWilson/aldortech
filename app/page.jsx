@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <div>
+        <div className="homePage">
           <Suspense fallback={<Loading />}>
             <HeroSection />
             <ServiceSlider />
@@ -29,9 +29,9 @@ export default function Home() {
             <QuikPort />
             <Reviews />
             <QuikBlogs />
-            <Footer />
           </Suspense>
         </div>
+        <Footer />
       </main>
     </>
   );

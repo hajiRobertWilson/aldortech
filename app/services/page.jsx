@@ -31,7 +31,7 @@ export default function Services() {
 
                     <div className="globalBG promise">
                         <h2>OUR DEVELOPMENT COMPANY’S EXCELLENCE</h2>
-                        <p><Link style={{ color: '#1679AB', fontWeight: 'bolder' }} href='/'>Aldor Technologies</Link> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsam, animi tempore in voluptatem architecto iste tenetur voluptatibus.</p>
+                        <p><Link style={{ color: '#1679AB', fontWeight: 'bold' }} href='/'>Aldor Technologies</Link> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsam, animi tempore in voluptatem architecto iste tenetur voluptatibus.</p>
                     </div>
 
                     <div className="globalBG industryCont">

@@ -362,6 +362,9 @@ main {
 /* ------------------------------- Home Page ----------------------------------- */
 
 /*______________ Hero Section ________________ */
+.homePage{
+    margin-bottom: 150px;
+}
 .heroCont {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     /* background-repeat: no-repeat;
@@ -821,7 +824,7 @@ main {
     background: var(--bg-gradient);
     width: 100%;
     margin-top: 0px;
-    padding: 50px 0;
+    padding: 50px 50px;
     text-transform: uppercase;
     user-select: none;
 }
@@ -845,13 +848,16 @@ main {
     justify-content: center;
     width: 100%;
     gap: 40px;
-    padding: 40px 0 80px 0;
+    padding: 40px 50px 80px 50px;
 }
 
 
 /* ------------------------------- Blogs End ----------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* ----------------------------- Services Page --------------------------------- */
+.servicePage{
+    margin-bottom: 150px;
+}
 .servicePage .posterCont {
     background: var(--bg-gradient);
     width: 100%;
@@ -1005,12 +1011,21 @@ main {
 
 /* --------------------------- Services Page End ------------------------------- */
 /*          --------------------------===-----------------------------           */
+/* ---------------------------- Blogs Page End --------------------------------- */
+.portPage{
+    width: 100%;
+    padding: 50px;
+    background: var(--bg-gradient);
+    height: 100vh;
+}
+/* ---------------------------- Blogs Page End ------------------------------- */
+/*          --------------------------===-----------------------------           */
 /* -------------------------------- Footer ------------------------------------- */
 
 .footerCont {
     display: flex;
     flex-flow: column wrap;
-    margin-top: 150px;
+    /* margin-top: 150px; */
     /* height: 400px; */
     background: var(--theme-footer);
     color: white;

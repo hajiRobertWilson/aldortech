@@ -12,10 +12,8 @@ export default function Portfolio() {
     return (
         <>
             <main>
-                <div>
-                    <div style={{ backgroundColor: 'red', width: '100%', height: '100vh' }}>
-                        <h1 style={{fontSize:'5rem'}}>Portfolio Page</h1>
-                    </div>
+                <div className="portPage">
+                    
                 </div>
                 <Footer />
             </main>
