@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { IonIcon } from "@ionic/react";
+import { call } from 'ionicons/icons'
 
 export default function Footer() {
   const links = ['Home', 'Services', 'Portfolio', 'Blogs', 'About Us', 'Contact'];
@@ -18,8 +20,8 @@ export default function Footer() {
   const handleMail = () => {
     window.open('mailto:info@aldortech.com')
   }
-  const handlePhone=()=>{
-    
+  const handlePhone = () => {
+
   }
 
   useEffect(() => {
@@ -46,7 +48,7 @@ export default function Footer() {
             </div>
             <div className="email">
               <h1 onClick={() => handleMail()}><FontAwesomeIcon icon={faEnvelope} /> info@aldortech.com</h1>
-              <h1><FontAwesomeIcon icon={faPhone} />+44(12)34567890</h1>
+              <h1><FontAwesomeIcon icon={faPhone} /><IonIcon icon={call} /> +1(12)34567890</h1>
             </div>
           </div>
           <div className="navigation">

@@ -362,9 +362,10 @@ main {
 /* ------------------------------- Home Page ----------------------------------- */
 
 /*______________ Hero Section ________________ */
-.homePage{
+.homePage {
     margin-bottom: 150px;
 }
+
 .heroCont {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     /* background-repeat: no-repeat;
@@ -855,9 +856,10 @@ main {
 /* ------------------------------- Blogs End ----------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* ----------------------------- Services Page --------------------------------- */
-.servicePage{
+.servicePage {
     margin-bottom: 150px;
 }
+
 .servicePage .posterCont {
     background: var(--bg-gradient);
     width: 100%;
@@ -1012,12 +1014,13 @@ main {
 /* --------------------------- Services Page End ------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* ---------------------------- Blogs Page End --------------------------------- */
-.portPage{
+.portPage {
     width: 100%;
     padding: 50px;
     background: var(--bg-gradient);
     height: 100vh;
 }
+
 /* ---------------------------- Blogs Page End ------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* -------------------------------- Footer ------------------------------------- */
@@ -1054,6 +1057,7 @@ main {
     flex-flow: column;
     /* gap: 5px; */
 }
+
 
 .footerCont .container .brandLogo h1 {
     font-size: 2.5rem;
