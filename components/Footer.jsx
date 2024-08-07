@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IonIcon } from "@ionic/react";
-import { call } from 'ionicons/icons'
+import { call, chevronForward } from 'ionicons/icons'
 
 export default function Footer() {
   const links = ['Home', 'Services', 'Portfolio', 'Blogs', 'About Us', 'Contact'];
@@ -48,13 +48,13 @@ export default function Footer() {
             </div>
             <div className="email">
               <h1 onClick={() => handleMail()}><FontAwesomeIcon icon={faEnvelope} /> info@aldortech.com</h1>
-              <h1><FontAwesomeIcon icon={faPhone} /><IonIcon icon={call} /> +1(12)34567890</h1>
+              <h1><IonIcon icon={call} /> +1(12)34567890</h1>
             </div>
           </div>
           <div className="navigation">
             <ul>
               {
-                index.map(i => <Link href={path[i]} className="navLink" key={i} data-value={path[i]}><li >{links[i]}</li></Link>)
+                index.map(i => <Link href={path[i]} className="navLink" key={i} data-value={path[i]}><li><IonIcon icon={chevronForward} />{links[i]}</li></Link>)
               }
             </ul>
           </div>

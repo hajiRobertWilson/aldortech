@@ -2,6 +2,7 @@
 import "../globals.css";
 import "../global.queries.css";
 import Footer from "@/components/Footer";
+import PortComponent from "@/components/portfolio";
 
 export const metadata = {
     title: 'Portfolio | Aldor Technologies',
@@ -11,9 +12,9 @@ export const metadata = {
 export default function Portfolio() {
     return (
         <>
-            <main>
+            <main >
                 <div className="portPage">
-                    
+                    <PortComponent />
                 </div>
                 <Footer />
             </main>

@@ -41,7 +41,7 @@
     }
     .indCard,
     .blogCard,
-    .quikPort .portCardCont .portCard,
+    .portCard,
     .headingCont .cardsCont .cards {
         width: 47%;
     }
@@ -172,7 +172,7 @@
     }
 
     .blogCard,
-    .quikPort .portCardCont .portCard,
+    .portCard,
     .headingCont .cardsCont .cards,
     .reviewCont .reviewCardCont .reviewCard {
         width: 100%;

@@ -198,6 +198,64 @@ main {
 }
 
 /* ________________ Service Card End ______________________ */
+
+/* _______________ Portfolio Card End _____________________ */
+.portCard {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    height: 100%;
+    width: 22%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.portCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+}
+
+.readmore {
+    background-color: var(--blue-1);
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    color: white;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.portCard:hover .title,
+.portCard:hover .readmore,
+.portCard:hover::before {
+    opacity: 1;
+}
+
+/* ________________ PortFolio Card End ______________________ */
+
 /* --------------------------- Global Styles End ------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* ---------------------------- Toolbar Section -------------------------------- */
@@ -624,85 +682,6 @@ main {
     padding: 40px 0 80px 0;
 }
 
-.quikPort .portCardCont .portCard {
-    min-height: 300px;
-    height: 100%;
-    width: 22%;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-.quikPort .portCardCont .cardImg1,
-.quikPort .portCardCont .cardImg2,
-.quikPort .portCardCont .cardImg3 {
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.cardImg1 {
-    background: url('../public/poster1.webp');
-}
-
-.cardImg2 {
-    background: url('../public/poster2.webp');
-}
-
-.cardImg3 {
-    background: url('../public/poster3.webp');
-}
-
-.quikPort .portCardCont .cardImg1::before,
-.quikPort .portCardCont .cardImg2::before,
-.quikPort .portCardCont .cardImg3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.title {
-    position: absolute;
-    top: 10px;
-    left: 8px;
-    color: white;
-    font-size: 1.5rem;
-    opacity: 0;
-}
-
-.readmore {
-    background-color: var(--blue-1);
-    height: 70px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    color: white;
-    font-size: 1.2rem;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.quikPort .portCardCont .cardImg1:hover .title,
-.quikPort .portCardCont .cardImg2:hover .title,
-.quikPort .portCardCont .cardImg3:hover .title,
-.quikPort .portCardCont .cardImg1:hover .readmore,
-.quikPort .portCardCont .cardImg2:hover .readmore,
-.quikPort .portCardCont .cardImg3:hover .readmore,
-.quikPort .portCardCont .cardImg1:hover::before,
-.quikPort .portCardCont .cardImg2:hover::before,
-.quikPort .portCardCont .cardImg3:hover::before {
-    opacity: 1;
-}
-
 .quikPort .portCardCont .redirectCard {
     background-color: var(--blue-1);
     color: white;
@@ -1014,12 +993,77 @@ main {
 /* --------------------------- Services Page End ------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* ---------------------------- Blogs Page End --------------------------------- */
-.portPage {
-    width: 100%;
-    padding: 50px;
+.portPage .headingCont {
     background: var(--bg-gradient);
-    height: 100vh;
+    width: 100%;
+    margin-top: 0px;
+    padding: 50px 50px;
+    user-select: none;
+
 }
+
+.portPage .headingCont h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--blue-1);
+}
+
+.portPage .projectCont {
+    margin-bottom: 150px;
+    padding: 30px 0 50px 0;
+}
+
+.portPage .projectCont .filterCont {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.portPage .projectCont .filterCont span {
+    font-size: 1.3rem;
+}
+
+.portPage .projectCont .filterCont ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.portPage .projectCont .filterCont li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.portPage .projectCont .filterCont li:hover {
+    background-color: var(--blue-1);
+}
+
+.portPage .projectCont .projectCardCont {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 50px;
+    transition: all 0.5s;
+}
+
 
 /* ---------------------------- Blogs Page End ------------------------------- */
 /*          --------------------------===-----------------------------           */
@@ -1028,8 +1072,6 @@ main {
 .footerCont {
     display: flex;
     flex-flow: column wrap;
-    /* margin-top: 150px; */
-    /* height: 400px; */
     background: var(--theme-footer);
     color: white;
     justify-content: space-between;
@@ -1049,13 +1091,25 @@ main {
 .footerCont .container .brandLogo {
     width: 30%;
     padding-top: 50px;
-    text-align: center;
+    /* text-align: center; */
+}
+
+.footerCont .container .navigation ion-icon {
+    transition: all 0.5s;
+}
+
+.footerCont .container .navigation li:hover ion-icon {
+    transform: scale(1.2);
+    padding-right: 10px;
 }
 
 .footerCont .container .brandLogo {
     display: flex;
     flex-flow: column;
-    /* gap: 5px; */
+}
+
+.footerCont .container .brandLogo ion-icon {
+    font-size: 25px;
 }
 
 
