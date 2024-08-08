@@ -1,6 +1,7 @@
 "use client"
 
-import PortCard from "./portCard"
+import { PortCard } from "./Cards"
+
 
 export default function QuikPort() {
     return (

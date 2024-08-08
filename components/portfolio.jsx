@@ -4,7 +4,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import PortCard from "./portCard";
+import { PortCard } from "./Cards";
+
 
 export default function PortComponent() {
     let filterBtn = ['All', 'Web', 'SPAs', 'Marketing', 'Wordpress', 'Apps'];

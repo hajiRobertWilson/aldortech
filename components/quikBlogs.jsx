@@ -1,7 +1,6 @@
 "use client"
 
-import Link from "next/link"
-import BlogCard from "./blogCard"
+import { BlogCard } from "./Cards"
 
 export default function QuikBlogs() {
     return (

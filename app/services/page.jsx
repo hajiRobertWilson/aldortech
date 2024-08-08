@@ -2,9 +2,8 @@
 import "../globals.css";
 import "../global.queries.css";
 import Footer from "@/components/Footer";
-import IndCard from "@/components/indCard";
-import ServiceCard from "@/components/serviceCard";
 import Link from "next/link";
+import { IndCard, ServiceCard } from "@/components/Cards";
 
 export const metadata = {
     title: 'Services | Aldor Technologies',

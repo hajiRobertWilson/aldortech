@@ -128,12 +128,14 @@ main {
     cursor: pointer;
     transition: all 0.5s;
 }
-.quikIconCont .upCont .arrowUp{
+
+.quikIconCont .upCont .arrowUp {
     font-size: 40px;
     color: white;
     transition: all 0.5s;
 }
-.quikIconCont .upCont:hover .arrowUp{
+
+.quikIconCont .upCont:hover .arrowUp {
     transform: scale(1.3);
 }
 
@@ -1108,7 +1110,93 @@ main {
 }
 
 
-/* ---------------------------- Blogs Page End ------------------------------- */
+/* ---------------------------- Blogs Page End --------------------------------- */
+/*          --------------------------===-----------------------------           */
+/* ----------------------------- About Us Page --------------------------------- */
+
+/* .aboutPage{
+    padding:50px ;
+} */
+.aboutPage .firstCont {
+    width: 100%;
+    background: var(--bg-gradient);
+    padding: 50px;
+}
+
+.aboutPage .firstCont h1 {
+    text-align: left;
+    font-size: 2rem;
+    color: var(--blue-1);
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.aboutPage .firstCont .postCont {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 20px; */
+    width: 100%;
+}
+
+.aboutPage .firstCont .postCont .text {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    text-align: left;
+    padding: 20px 0;
+    /* border:2px solid black; */
+}
+
+.aboutPage .firstCont .postCont .text h2 {
+    font-size: 1.5rem;
+    color: grey;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.aboutPage .firstCont .subCont p,
+.aboutPage .firstCont .postCont .text p {
+    text-align: justify;
+}
+
+.aboutPage .firstCont .postCont .img {
+    width: 47%;
+    background-color: var(--blue-1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.aboutPage .firstCont .postCont .img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.aboutPage .firstCont .subCont {
+    padding: 20px 0;
+}
+
+.aboutPage .firstCont .subCont h3 {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--blue-1);
+}
+.aboutPage .secondCont{
+    padding:50px;
+}
+.aboutPage .secondCont h3{
+    font-size:2rem;
+    color:var(--blue-1);
+    font-weight:bolder;
+}
+.aboutPage .secondCont ul{
+    list-style-type: armenian;
+}
+
+/* -------------------------- About Us Page End -------------------------------- */
 /*          --------------------------===-----------------------------           */
 /* -------------------------------- Footer ------------------------------------- */
 

@@ -39,13 +39,15 @@
     .blogCard .imgContainer .img {
         height: 400px;
     }
+
     .indCard,
     .blogCard,
     .portCard,
     .headingCont .cardsCont .cards {
         width: 47%;
     }
-    .servicePage .promise p{
+
+    .servicePage .promise p {
         width: 80%;
     }
 }
@@ -115,16 +117,29 @@
     .servicePage .posterCont {
         flex-flow: column-reverse;
     }
+
     .servicePage .posterCont .text,
-    .servicePage .posterCont .imgCont{
+    .servicePage .posterCont .imgCont {
         width: 100%;
     }
-    .serviceCard{
+
+    .serviceCard {
         width: 45%;
     }
-    .servicePage .serviceCont .serviceCardCont{
+
+    .servicePage .serviceCont .serviceCardCont {
         flex-flow: row wrap;
     }
+
+    .aboutPage .firstCont .postCont {
+        flex-flow: column;
+    }
+
+    .aboutPage .firstCont .postCont .img,
+    .aboutPage .firstCont .postCont .text {
+        width: 100%;
+    }
+
     .footerCont .container .quiklinks {
         width: 100%;
         text-align: left;
@@ -138,6 +153,10 @@
 }
 
 @media(width<=770px) {
+    main {
+        padding-top: 80px;
+    }
+
     .navContainer {
         padding: 5px 20px;
         transition: all 0.5s;
@@ -185,10 +204,12 @@
     .blogCard .imgContainer .img {
         height: 450px;
     }
-    .serviceCard{
+
+    .serviceCard {
         width: 80%;
     }
-    .servicePage .whyUsCont p{
+
+    .servicePage .whyUsCont p {
         padding: 0;
     }
 }
@@ -212,14 +233,17 @@
     .postCont2 .brand p {
         font-size: 1rem;
     }
-    .servicePage .posterCont .text h1{
+
+    .servicePage .posterCont .text h1 {
         font-size: 2rem;
     }
-    .servicePage .promise h2{
+
+    .servicePage .promise h2 {
         font-size: 1.5rem;
     }
+
     .serviceCard,
-    .indCard{
+    .indCard {
         width: 100%;
     }
 

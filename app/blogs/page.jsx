@@ -3,7 +3,7 @@ import "../globals.css";
 import "../global.queries.css";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import BlogCard from "@/components/blogCard";
+import {BlogCard} from "@/components/Cards";
 
 export const metadata = {
     title: 'Blogs | Aldor Technologies',
