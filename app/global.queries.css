@@ -131,12 +131,12 @@
         flex-flow: row wrap;
     }
 
-    .aboutPage .firstCont .postCont {
+    .aboutPage .postCont {
         flex-flow: column;
     }
 
-    .aboutPage .firstCont .postCont .img,
-    .aboutPage .firstCont .postCont .text {
+    .aboutPage .postCont .img,
+    .aboutPage .postCont .text {
         width: 100%;
     }
 
@@ -212,6 +212,14 @@
     .servicePage .whyUsCont p {
         padding: 0;
     }
+
+    .aboutPage .secondCont ul {
+        flex-flow: column;
+    }
+
+    .aboutPage .secondCont li {
+        width: 100%;
+    }
 }
 
 @media (width<=550px) {
@@ -245,6 +253,10 @@
     .serviceCard,
     .indCard {
         width: 100%;
+    }
+
+    .aboutPage .secondCont ul {
+        padding: 10px 0 0 10px;
     }
 
     .footerCont .container .quiklinks,

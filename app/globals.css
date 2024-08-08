@@ -1131,7 +1131,7 @@ main {
     padding-bottom: 20px;
 }
 
-.aboutPage .firstCont .postCont {
+.aboutPage .postCont {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -1140,7 +1140,11 @@ main {
     width: 100%;
 }
 
-.aboutPage .firstCont .postCont .text {
+.reverse {
+    flex-flow: row-reverse;
+}
+
+.aboutPage .postCont .text {
     width: 50%;
     display: flex;
     flex-flow: column nowrap;
@@ -1150,7 +1154,7 @@ main {
     /* border:2px solid black; */
 }
 
-.aboutPage .firstCont .postCont .text h2 {
+.aboutPage .postCont .text h2 {
     font-size: 1.5rem;
     color: grey;
     font-weight: bolder;
@@ -1158,18 +1162,18 @@ main {
 }
 
 .aboutPage .firstCont .subCont p,
-.aboutPage .firstCont .postCont .text p {
+.aboutPage .postCont .text p {
     text-align: justify;
 }
 
-.aboutPage .firstCont .postCont .img {
+.aboutPage .postCont .img {
     width: 47%;
     background-color: var(--blue-1);
     padding: 10px;
     border-radius: 10px;
 }
 
-.aboutPage .firstCont .postCont .img img {
+.aboutPage .postCont .img img {
     width: 100%;
     border-radius: 10px;
 }
@@ -1184,16 +1188,33 @@ main {
     text-transform: uppercase;
     color: var(--blue-1);
 }
-.aboutPage .secondCont{
-    padding:50px;
+
+.aboutPage .secondCont {
+    padding: 50px;
+    margin-bottom: 150px;
 }
-.aboutPage .secondCont h3{
-    font-size:2rem;
-    color:var(--blue-1);
-    font-weight:bolder;
+
+.aboutPage .secondCont h3 {
+    font-size: 2rem;
+    color: var(--blue-1);
+    font-weight: bolder;
 }
-.aboutPage .secondCont ul{
-    list-style-type: armenian;
+
+.aboutPage .secondCont ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 1.2rem;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 20px 0 0 50px;
+    margin-bottom: 50px;
+    transition: all 0.5s;
+}
+
+.aboutPage .secondCont li {
+    padding: 6px 0;
+    width: 47%;
 }
 
 /* -------------------------- About Us Page End -------------------------------- */

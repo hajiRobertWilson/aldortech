@@ -52,6 +52,17 @@ export default function About() {
                             <li>Adaptive Flexibility</li>
                             <li>Catalysts for Business Growth</li>
                         </ul>
+                        <div  className="postCont">
+                            <div className="text">
+                                <h2 style={{ color: '#1679AB' }}>DIGITAL EVOLUTION WITH ALDOR TECHNOLOGIES</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quisquam aperiam qui tempore minima corrupti corporis possimus delectus temporibus laudantium tenetur ex, nostrum ipsam deserunt aliquam aspernatur eligendi harum earum?</p>
+                                <h2 style={{ color: '#1679AB' }}>Heading Text!</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum esse, ipsam voluptas obcaecati impedit soluta vel eos tenetur alias dicta amet nesciunt suscipit possimus, maiores quisquam! Vero earum maxime ea!</p>
+                            </div>
+                            <div className="img">
+                                <img src="/AboutUs2.webp" alt="AboutUS1" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <Footer />
