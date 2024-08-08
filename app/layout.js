@@ -3,6 +3,7 @@ import "./globals.css";
 import "./global.queries.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import Whatsapp from "@/components/whatsapp";
 config.autoAddCss = false;
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
       <body>
+        <Whatsapp />
         <Navbar />
         {children}
       </body>
