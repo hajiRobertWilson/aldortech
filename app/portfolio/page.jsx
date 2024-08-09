@@ -1,7 +1,7 @@
 // ------------- Portfolio Page -----------------//
 import "../globals.css";
 import "../global.queries.css";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import PortComponent from "@/components/portfolio";
 
 export const metadata = {

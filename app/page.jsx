@@ -3,7 +3,7 @@
 import "./globals.css";
 import "./global.queries.css";
 import HeroSection from "@/components/Hero";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import ServiceSlider from "@/components/services";
 import Headings from "@/components/headings";
 import QuikPort from "@/components/quikPortfolio";

@@ -1,7 +1,7 @@
 // ------------- Services Page -----------------//
 import "../globals.css";
 import "../global.queries.css";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import Link from "next/link";
 import { IndCard, ServiceCard } from "@/components/Cards";
 

@@ -143,7 +143,7 @@ main {
 .blogCard {
     min-height: 300px;
     height: 100%;
-    width: 22%;
+    width: 300px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
@@ -192,7 +192,7 @@ main {
 
 /* _______________ Indus Card Styles ____________________ */
 .indCard {
-    width: 22%;
+    width: 250px;
     display: flex;
     flex-flow: column;
     gap: 20px;
@@ -250,9 +250,9 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 300px;
+    min-height: 250px;
     height: 100%;
-    width: 22%;
+    width: 300px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
@@ -471,9 +471,6 @@ main {
 
 .heroCont {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    /* background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
     width: 100%;
     height: 600px;
     position: relative;
@@ -588,7 +585,10 @@ main {
 
 .postCont1 .brand h1,
 .postCont2 .brand h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--blue-1);
+    text-align: center;
     transition: all 0.5s;
 }
 
@@ -629,14 +629,13 @@ main {
 .postCont2 .posterCont .postText {
     font-size: 1.3rem;
     text-align: justify;
-    /* overflow: hidden; */
     color: var(--theme-text-color);
     transition: all 0.5s;
 }
 
 .postCont1 .posterCont .postImg img,
 .postCont2 .posterCont .postImg img {
-    width: 75%;
+    /* width: 75%; */
     margin: auto;
     border-radius: 5px;
 }
@@ -649,7 +648,7 @@ main {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    padding: 0 50px;
+    padding:50px;
 }
 
 .headingCont .boldtextCont {
@@ -661,7 +660,8 @@ main {
 .headingCont .boldtextCont h1 {
     width: 50%;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: bolder;
+    color: var(--blue-1);
 }
 
 .headingCont .boldtextCont .paragraph {
@@ -697,8 +697,7 @@ main {
 
 .headingCont .logoCont img {
     width: 100%;
-    /* height: 600px; */
-    padding: 0 35px;
+    border-radius: 10px;
 }
 
 /*______________ Headings End _________________ */
@@ -714,6 +713,8 @@ main {
 
 .quikPort h1 {
     font-size: 2rem;
+    font-weight: bolder;
+    color: var(--blue-1);
     padding: 50px 0;
 }
 
@@ -765,6 +766,8 @@ main {
 
 .quikBlog h1 {
     font-size: 2rem;
+    font-weight: bolder;
+    color: var(--blue-1);
     padding: 50px 0;
 }
 
@@ -792,6 +795,8 @@ main {
 
 .reviewCont h1 {
     font-size: 2rem;
+    font-weight: bolder;
+    color: var(--blue-1);
 }
 
 .reviewCont .reviewCardCont {
@@ -855,13 +860,13 @@ main {
 }
 
 .blogPage .headingCont h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--blue-1);
     font-weight: bolder;
 }
 
 .blogPage .headingCont h2 {
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     color: var(--theme-text-color);
     font-weight: bolder;
 }
@@ -1075,9 +1080,8 @@ main {
 .portPage .projectCont .filterCont ul {
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
+    max-width: 800px;
     overflow-x: scroll;
 }
 
@@ -1085,7 +1089,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
+    min-width: fit-content;
     padding: 5px 20px;
     font-size: 1.2rem;
     transition: all 0.5s;
@@ -1245,38 +1249,44 @@ main {
     margin: 150px 0;
     transition: all 0.5s;
 }
+
 .contactPage .mainCont .img,
 .contactPage .mainCont .form {
     width: 47%;
     transition: all 0.5s;
 }
 
-.contactPage .mainCont .img img{
+.contactPage .mainCont .img img {
     border-radius: 10px;
 }
-.formCont{
+
+.formCont {
     width: 100%;
     padding: 10px;
 }
-.formCont .subCont{
+
+.formCont .subCont {
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
     transition: all 0.5s;
 }
-.formCont .input-box{
+
+.formCont .input-box {
     position: relative;
     width: 100%;
     margin: 25px 0;
 }
-.formCont .input-box label{
+
+.formCont .input-box label {
     position: absolute;
     top: 0;
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--blue-1);
 }
-.formCont input{
+
+.formCont input {
     width: 100%;
     padding: 25px 5px 0 10px;
     height: 60px;
@@ -1285,7 +1295,8 @@ main {
     outline: none;
     font-size: 1.2rem;
 }
-.formCont textarea{
+
+.formCont textarea {
     width: 100%;
     padding-top: 40px;
     padding-left: 10px;
@@ -1294,7 +1305,8 @@ main {
     outline: none;
     font-size: 1.2rem;
 }
-.formCont button{
+
+.formCont button {
     height: 50px;
     width: 250px;
     border-radius: 10px;
@@ -1318,18 +1330,33 @@ main {
 .footerCont .container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     color: var(--theme-text-color);
     max-width: 1800px;
+    padding: 0 50px;
+    padding-top: 50px;
     /* gap: 80px; */
 }
 
-.footerCont .container .quiklinks,
+.footerCont .container .brandLogo h2,
+.footerCont .container .quiklinks h2,
+.footerCont .container .address h2,
+.footerCont .container .navigation h2 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
 .footerCont .container .navigation,
 .footerCont .container .brandLogo {
     width: 30%;
-    padding-top: 50px;
-    /* text-align: center; */
+    margin-bottom: 50px;
+}
+
+.footerCont .container .address,
+.footerCont .container .quiklinks {
+    width: 20%;
+    margin-bottom: 50px;
 }
 
 .footerCont .container .navigation ion-icon {
@@ -1346,33 +1373,50 @@ main {
     flex-flow: column;
 }
 
+.footerCont .container .brandLogo h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
 .footerCont .container .brandLogo ion-icon {
     font-size: 25px;
 }
 
-
-.footerCont .container .brandLogo h1 {
-    font-size: 2.5rem;
+.footerCont .container .brandLogo a {
+    font-size: larger;
+    transition: all 0.5s;
 }
 
 .footerCont .container .brandLogo .email h1 {
     cursor: pointer;
     font-size: 1.3rem;
+    transition: all 0.5s;
+}
+
+.footerCont .container .brandLogo .email h1:hover,
+.footerCont .container .brandLogo a:hover {
+    color: var(--blue-1);
 }
 
 .footerCont .container .quiklinks li,
 .footerCont .container .navigation li {
-    /* text-align: center; */
-    /* margin: auto; */
-    padding: 0 80px 0;
-    font-size: 1.5rem;
+    /* padding: 0 80px 0; */
+    font-size: 1.2rem;
     cursor: pointer;
+}
+
+.footerCont .container .address {
+    font-size: 1.2rem;
+}
+
+.footerCont .container .address ion-icon {
+    font-size: 1.8rem;
 }
 
 .footerCont .copyright {
     border-top: 2px solid var(--nav-border);
     color: var(--theme-text-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     padding: 5px 0;
 

@@ -28,23 +28,12 @@
     .postCont1 .posterCont .postText,
     .postCont2 .posterCont .postText {
         font-size: 1.4rem;
-        max-height: 350px;
-        overflow-y: scroll;
+        /* max-height: 350px; */
+        /* overflow-y: scroll; */
     }
 
     .blogCard {
         padding-bottom: 50px;
-    }
-
-    .blogCard .imgContainer .img {
-        height: 400px;
-    }
-
-    .indCard,
-    .blogCard,
-    .portCard,
-    .headingCont .cardsCont .cards {
-        width: 47%;
     }
 
     .servicePage .promise p {
@@ -110,10 +99,6 @@
         padding: 0;
     }
 
-    .blogCard .imgContainer .img {
-        height: 300px;
-    }
-
     .servicePage .posterCont {
         flex-flow: column-reverse;
     }
@@ -148,19 +133,22 @@
     .contactPage .mainCont .form {
         width: 100%;
     }
-    .contactPage .mainCont .form{
+
+    .contactPage .mainCont .form {
         margin-bottom: 20px;
     }
 
-    .footerCont .container .quiklinks {
-        width: 100%;
-        text-align: left;
+    .footerCont .container .address {
+        width: 50%;
     }
 
-    .footerCont .container .navigation,
+    .footerCont .container .quiklinks,
+    .footerCont .container .navigation {
+        width: 25%;
+    }
+
     .footerCont .container .brandLogo {
-        width: 48%;
-        text-align: left;
+        width: 40%;
     }
 }
 
@@ -180,7 +168,6 @@
 
     .heroCont .colorCont {
         display: none;
-        /* position: ; */
     }
 
     .heroCont .rightContent,
@@ -202,19 +189,16 @@
         font-size: 2rem;
     }
 
-    .blogCard,
-    .portCard,
+    .headingCont .logoCont,
     .headingCont .cardsCont .cards,
     .reviewCont .reviewCardCont .reviewCard {
-        width: 100%;
+        width: 60%;
     }
 
     .reviewCont .reviewCardCont {
         flex-flow: column nowrap;
-    }
-
-    .blogCard .imgContainer .img {
-        height: 450px;
+        align-items: center;
+        justify-content: center;
     }
 
     .serviceCard {
@@ -232,12 +216,27 @@
     .aboutPage .secondCont li {
         width: 100%;
     }
+
+
+    .footerCont .container .quiklinks,
+    .footerCont .container .address {
+        width: 50%;
+    }
+
+
+    .footerCont .container .navigation {
+        width: 30%;
+    }
+
+    .footerCont .container .brandLogo {
+        width: 70%;
+    }
+    .footerCont .copyright{
+        padding:0 20px 30px 20px;
+    }
 }
 
 @media (width<=550px) {
-    .blogCard .imgContainer .img {
-        height: 300px;
-    }
 
     .postCont1 .brand,
     .postCont2 .brand {
@@ -254,6 +253,12 @@
         font-size: 1rem;
     }
 
+    .headingCont .logoCont,
+    .headingCont .cardsCont .cards,
+    .reviewCont .reviewCardCont .reviewCard {
+        width: 100%;
+    }
+
     .servicePage .posterCont .text h1 {
         font-size: 2rem;
     }
@@ -262,23 +267,24 @@
         font-size: 1.5rem;
     }
 
-    .serviceCard,
-    .indCard {
+    .serviceCard{
         width: 100%;
     }
 
     .aboutPage .secondCont ul {
         padding: 10px 0 0 10px;
     }
-    .formCont .subCont{
+
+    .formCont .subCont {
         flex-flow: column;
     }
 
+    .footerCont .container .address,
     .footerCont .container .quiklinks,
     .footerCont .container .navigation,
     .footerCont .container .brandLogo {
         width: 100%;
-        text-align: left;
+        text-align: center;
     }
 
 }

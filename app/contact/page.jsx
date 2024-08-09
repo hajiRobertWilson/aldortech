@@ -1,7 +1,7 @@
 // ------------- Contact Page -----------------//
 import "../globals.css";
 import "../global.queries.css";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import ContactForm from "@/components/contactForm";
 
 export const metadata = {

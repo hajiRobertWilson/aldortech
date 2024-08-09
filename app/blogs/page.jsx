@@ -1,7 +1,7 @@
 // ------------- Blogs Page -----------------//
 import "../globals.css";
 import "../global.queries.css";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import Link from "next/link";
 import {BlogCard} from "@/components/Cards";
 

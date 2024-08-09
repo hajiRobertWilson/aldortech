@@ -1,7 +1,7 @@
 // ------------- About Page -----------------//
 import "../globals.css";
 import "../global.queries.css";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 
 export const metadata = {
     title: 'About Us | Aldor Technologies',
