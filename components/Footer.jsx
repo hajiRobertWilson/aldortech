@@ -20,9 +20,6 @@ export default function Footer() {
   const handleMail = () => {
     window.open('mailto:info@aldortech.com')
   }
-  const handlePhone = () => {
-
-  }
 
   useEffect(() => {
     let activeTab = pathName
@@ -47,8 +44,8 @@ export default function Footer() {
             <div className="socialLinks">
             </div>
             <div className="email">
-              <h1 onClick={() => handleMail()}><FontAwesomeIcon icon={faEnvelope} /> info@aldortech.com</h1>
-              <h1><IonIcon icon={call} /> +1(12)34567890</h1>
+              <h1 onClick={()=>handleMail()}><FontAwesomeIcon icon={faEnvelope} /> info@aldortech.com</h1>
+              <h1><IonIcon icon={call} /><a href="tel:+923228090884">+1(12)34567890</a></h1>
             </div>
           </div>
           <div className="navigation">

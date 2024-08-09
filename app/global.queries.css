@@ -140,6 +140,18 @@
         width: 100%;
     }
 
+    .contactPage .mainCont {
+        flex-flow: column;
+    }
+
+    .contactPage .mainCont .img,
+    .contactPage .mainCont .form {
+        width: 100%;
+    }
+    .contactPage .mainCont .form{
+        margin-bottom: 20px;
+    }
+
     .footerCont .container .quiklinks {
         width: 100%;
         text-align: left;
@@ -257,6 +269,9 @@
 
     .aboutPage .secondCont ul {
         padding: 10px 0 0 10px;
+    }
+    .formCont .subCont{
+        flex-flow: column;
     }
 
     .footerCont .container .quiklinks,

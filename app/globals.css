@@ -1219,6 +1219,92 @@ main {
 
 /* -------------------------- About Us Page End -------------------------------- */
 /*          --------------------------===-----------------------------           */
+/* --------------------------- Contact Us Page --------------------------------- */
+.contactPage .heading {
+    width: 100%;
+    background: var(--bg-gradient);
+    text-align: center;
+    padding: 50px;
+}
+
+.contactPage .heading h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--blue-1);
+    font-weight: bolder;
+}
+
+.contactPage .mainCont {
+    padding: 50px;
+    width: 100%;
+    background: var(--bg-gradient);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 150px 0;
+    transition: all 0.5s;
+}
+.contactPage .mainCont .img,
+.contactPage .mainCont .form {
+    width: 47%;
+    transition: all 0.5s;
+}
+
+.contactPage .mainCont .img img{
+    border-radius: 10px;
+}
+.formCont{
+    width: 100%;
+    padding: 10px;
+}
+.formCont .subCont{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    transition: all 0.5s;
+}
+.formCont .input-box{
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+}
+.formCont .input-box label{
+    position: absolute;
+    top: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--blue-1);
+}
+.formCont input{
+    width: 100%;
+    padding: 25px 5px 0 10px;
+    height: 60px;
+    background: transparent;
+    border-bottom: 2px solid var(--blue-1);
+    outline: none;
+    font-size: 1.2rem;
+}
+.formCont textarea{
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 10px;
+    background: transparent;
+    border-bottom: 2px solid var(--blue-1);
+    outline: none;
+    font-size: 1.2rem;
+}
+.formCont button{
+    height: 50px;
+    width: 250px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: var(--blue-1);
+}
+
+/* -------------------------- Contact Page End --------------------------------- */
+/*          --------------------------===-----------------------------           */
 /* -------------------------------- Footer ------------------------------------- */
 
 .footerCont {

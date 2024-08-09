@@ -2,6 +2,7 @@
 import "../globals.css";
 import "../global.queries.css";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/contactForm";
 
 export const metadata = {
   title: 'Contact | Aldor Technologies',
@@ -12,9 +13,19 @@ export default function Contact() {
   return (
     <>
       <main>
-        <div>
-          <div style={{ backgroundColor: 'red', width: '100%', height: '100vh' }}>
-            <h1 style={{ fontSize: '5rem' }}>Contact Page</h1>
+        <div className="contactPage">
+          <div className="heading">
+            <h1>Contact us or ask your questions!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, est? Blanditiis voluptas exercitationem necessitatibus pariatur asperiores ex laborum, odio vel sapiente, voluptate praesentium laboriosam temporibus! Qui enim quod distinctio ad?</p>
+          </div>
+          <div className="mainCont">
+            <div className="form">
+              <ContactForm />
+            </div>
+            <div className="img">
+              <img src="/contact2.png" alt="Contact" />
+              {/* <img src="/contact.webp" alt="Contact" /> */}
+            </div>
           </div>
         </div>
         <Footer />
