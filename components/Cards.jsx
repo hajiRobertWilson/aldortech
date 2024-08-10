@@ -1,10 +1,7 @@
 "use client"
-
-import { useRouter } from "next/navigation"
 import DynamicRoute from "./dynamicRoute";
 
-export function BlogCard({ title }) {
-    const router = useRouter();
+export function BlogCard({ title, id }) {
 
     return (
         <>
@@ -14,7 +11,7 @@ export function BlogCard({ title }) {
                 </div>
                 <h3>{title}</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi dolores nobis explicabo tenetur sint tempora in</p>
-                <DynamicRoute />
+                <DynamicRoute Id={id} />
             </div>
         </>
     )

@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
-export default function DynamicRoute() {
+export default function DynamicRoute({Id}) {
     const [input, setInput] = useState('')
     const router = useRouter()
     const data = input
@@ -15,12 +15,10 @@ export default function DynamicRoute() {
         });
         let result = await response.json();
         console.log(result.response)
-        // router.push(result.response)
     }
     return (
         <>
-            <button onClick={() => fetchData()} type="button">Read More</button >
-            <input type="text" onChange={(e) => setInput(e.target.value)} />
+            <button onClick={() => fetchData()} type="button">Read More</button>
         </>
     )
 }
