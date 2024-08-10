@@ -161,7 +161,7 @@ main {
     text-align: justify;
 }
 
-.blogCard a {
+.blogCard button{
     color: var(--blue-1);
     text-decoration: underline;
     font-weight: bold;

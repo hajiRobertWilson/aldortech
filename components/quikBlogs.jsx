@@ -8,10 +8,10 @@ export default function QuikBlogs() {
             <div className="quikBlog">
                 <h1>Blogs</h1>
                 <div className="blogCardCont">
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
+                    <BlogCard title={'first'} />
+                    <BlogCard title={'second'} />
+                    <BlogCard title={'third'}/>
+                    <BlogCard title={'fourth'}/>
                 </div>
             </div>
         </>
