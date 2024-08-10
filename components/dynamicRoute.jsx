@@ -15,7 +15,7 @@ export default function DynamicRoute() {
         });
         let result = await response.json();
         // console.log(result.response)
-        router.push(result.response)
+        // router.push(result.response)
     }
     return (
         <>
