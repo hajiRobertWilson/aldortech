@@ -1,4 +1,5 @@
 'use client'
+// import { useDataContext } from "@/app/context"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -13,6 +14,10 @@ export default function HeroSection() {
     //         clearTimeout(timeOut)
     //     }
     // }, [tab])
+    // const { data } = useDataContext()
+    // useEffect(() => {
+    //     console.log(data)
+    // }, [data])
     return (
         <>
             <div className="heroCont">

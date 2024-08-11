@@ -20,6 +20,7 @@
     --dropdown-link-border: black;
     --navBg: rgba(224, 247, 252, 1);
     --theme-text-color: black;
+    --theme-contrast: white;
     --theme-hover-color: #1679AB;
     --bg-color: rgb(221, 220, 229);
     --bg-gradient: linear-gradient(329deg, rgba(221, 220, 229, 1) 11%, rgba(231, 231, 233, 1) 34%, rgba(224, 247, 252, 1) 100%);
@@ -49,6 +50,7 @@
     --theme-btn: #000000;
     --theme-icon: orange;
     --theme-border: #130f40;
+    --theme-contrast: black;
     --toolbar-bg: #130f40;
     --nav-border: whitesmoke;
     --dropdown-link-border: white;
@@ -69,10 +71,11 @@ body {
     max-width: 1800px;
     min-width: 370px;
     position: relative;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg.webp');
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
+    background-color: var(--theme-contrast);
     overflow: hidden;
 }
 
@@ -161,7 +164,7 @@ main {
     text-align: justify;
 }
 
-.blogCard button{
+.blogCard button {
     color: var(--blue-1);
     text-decoration: underline;
     font-weight: bold;
@@ -648,7 +651,7 @@ main {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    padding:50px;
+    padding: 50px;
 }
 
 .headingCont .boldtextCont {
