@@ -1,18 +1,18 @@
+'use client'
+
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import "./global.queries.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Whatsapp from "@/components/whatsapp";
+import { Provider } from "./context";
+import { usePathname } from "next/navigation";
 config.autoAddCss = false;
-
-export const metadata = {
-  title: "Home | Aldor Technologies",
-  description: "Welcome to Aldor Technologies - your go-to destination for expert web development, web hosting, and web design. Our comprehensive solutions include SEO services, blog writing, and content creation to enhance your online presence. Explore our innovative portfolios and contact options to discover how Aldor Technologies can elevate your web and digital marketing strategies.",
-};
 
 
 export default function RootLayout({ children }) {
+  const pathName = usePathname()
 
   return (
     <html lang="en">
@@ -21,9 +21,15 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
       <body>
-        <Whatsapp />
-        <Navbar />
-        {children}
+        <Provider>
+          {
+            (pathName === '/blogs/blogReader') ? '' : <Whatsapp />
+          }
+          {
+            (pathName === '/blogs/blogReader') ? '' : <Navbar />
+          }
+          {children}
+        </Provider>
       </body>
     </html>
   );

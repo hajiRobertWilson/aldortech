@@ -1,16 +1,22 @@
+"use client"
 // ------------- Blogs Page -----------------//
 import "../globals.css";
 import "../global.queries.css";
 import Footer from "@/components/footer";
-import Link from "next/link";
-import {BlogCard} from "@/components/Cards";
+import { BlogCard } from "@/components/Cards";
+import { useEffect, useState } from "react";
 
-export const metadata = {
-    title: 'Blogs | Aldor Technologies',
-    description: "Explore the Aldor Technologies blog for insightful articles, industry news, and expert opinions on web technologies, digital marketing, and IT solutions. Stay updated with our latest posts and trends to keep your business at the forefront of technology."
-}
 
 export default function Blogs() {
+    const [data, setData] = useState([]);
+
+
+    useEffect(() => {
+        fetch('/api/blog').then(response => response.json()).then(result => {
+            setData(result.data)
+        }).catch(err => console.log(err))
+
+    }, [])
     return (
         <>
             <main>
@@ -20,16 +26,9 @@ export default function Blogs() {
                         <h2>Latest New Blogs</h2>
                     </div>
                     <div className="globalBG blogsContainer">
-                        <BlogCard/>
-                        <BlogCard/>
-                        <BlogCard/>
-                        <BlogCard/>
-                        <BlogCard/>
-                        <BlogCard/>
-                        <BlogCard/>
-                        <BlogCard/>
-                        <BlogCard/>
-                        <BlogCard/>
+                        {
+                            data.map(data => <BlogCard imgPath={data.path} id={data.id} title={data.title} key={data.id} />)
+                        }
                     </div>
                 </div>
                 <Footer />

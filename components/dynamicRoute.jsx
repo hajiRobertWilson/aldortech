@@ -1,20 +1,20 @@
 "use client"
 
-import { useRouter } from "next/navigation"
-import { useState } from "react"
+import { useDataContext } from "@/app/context"
 
-export default function DynamicRoute({Id}) {
-    const [input, setInput] = useState('')
+import { useRouter } from "next/navigation"
+
+export default function DynamicRoute({ Id }) {
     const router = useRouter()
-    const data = input
-    const fetchData = async () => {
-        let response = await fetch('/api/file', {
+    const { setData } = useDataContext()
+    const fetchData = () => {
+        setData(Id)
+        fetch('/api/clipBoard', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 'data': data })
-        });
-        let result = await response.json();
-        console.log(result.response)
+            body: JSON.stringify({ 'id': '66b89aac7b1ffd2e989657ad', 'blogId': Id })
+        }).then(response => response.json()).catch(err => console.log(err))
+        router.push('/blogs/blogReader')
     }
     return (
         <>
