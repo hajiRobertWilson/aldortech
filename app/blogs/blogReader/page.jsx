@@ -7,12 +7,12 @@ import { useEffect, useState } from "react"
 
 export default function BlogReader() {
     const [blog, setBlog] = useState('')
-    // const { data } = useDataContext()
+    const { data } = useDataContext()
     useEffect(() => {
         fetch('/api/blog/readBlog').then(res => res.json()).then(result => {
             setBlog(result.data)
         }).catch(err => console.log(err))
-    }, [])
+    }, [data])
     useEffect(() => {
         document.title = blog.title ? blog.title : 'Blog Reader | Aldor Technologies'
     }, [blog])
