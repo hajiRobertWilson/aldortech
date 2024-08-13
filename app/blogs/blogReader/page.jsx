@@ -3,16 +3,18 @@ import { useDataContext } from "@/app/context"
 import { IonIcon } from "@ionic/react";
 import { chevronForward } from 'ionicons/icons'
 import Link from "next/link"
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react"
 
 export default function BlogReader() {
     const [blog, setBlog] = useState('')
-    const { data } = useDataContext()
+    const pathName = usePathname()
+    // const { data } = useDataContext()
     useEffect(() => {
         fetch('/api/blog/readBlog').then(res => res.json()).then(result => {
             setBlog(result.data)
         }).catch(err => console.log(err))
-    }, [data])
+    }, [pathName])
     useEffect(() => {
         document.title = blog.title ? blog.title : 'Blog Reader | Aldor Technologies'
     }, [blog])
