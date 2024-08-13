@@ -7,7 +7,7 @@ export async function GET(req) {
         await dbClient.connect()
         const dataBase = dbClient.db(process.env.DataBase)
         const collection = dataBase.collection('Blogs')
-        let cursor =collection.find()
+        let cursor = collection.find()
         for await (const key of cursor) {
             cards.push(key)
         }
@@ -18,7 +18,7 @@ export async function GET(req) {
     }
     catch (err) {
         console.log(err)
-        new Response(JSON.stringify({ msg: 'Internel Server Error' }), {
+        return new Response(JSON.stringify({ msg: 'Internel Server Error' }), {
             status: 500,
             headers: { 'Content-Type': 'application/json' }
         })
