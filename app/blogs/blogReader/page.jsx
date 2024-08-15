@@ -14,6 +14,7 @@ export default function BlogReader() {
         fetch('/api/blog/readBlog').then(res => res.json()).then(result => {
             console.log('inside fetch response')
             setBlog(result.data)
+            console.log(result)
         }).catch(err => console.log(err))
         console.log('Outside after fetch api')
     }, [pathName])
