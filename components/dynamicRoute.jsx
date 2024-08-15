@@ -19,7 +19,7 @@ export default function DynamicRoute({ Id }) {
     }
     return (
         <>
-            <button onClick={() => fetchData()} type="button"><a href='/blogs/blogReader'>Read More</a> </button>
+            <button onClick={() => fetchData()} type="button"><Link href='/blogs/blogReader'>Read More</Link> </button>
         </>
     )
 }
