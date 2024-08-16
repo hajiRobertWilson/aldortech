@@ -2,6 +2,7 @@
 import "../globals.css";
 import "../global.queries.css";
 import Footer from "@/components/footer";
+import Whatsapp from "@/components/whatsapp";
 
 export const metadata = {
     title: 'About Us | Aldor Technologies',
@@ -13,6 +14,7 @@ export default function About() {
         <>
             <main>
                 <div className="aboutPage">
+                    <Whatsapp/>
                     <div className="firstCont">
                         <h1>About Us</h1>
                         <div className="postCont">

@@ -3,6 +3,7 @@ import "../globals.css";
 import "../global.queries.css";
 import Footer from "@/components/footer";
 import ContactForm from "@/components/contactForm";
+import Whatsapp from "@/components/whatsapp";
 
 export const metadata = {
   title: 'Contact | Aldor Technologies',
@@ -14,6 +15,7 @@ export default function Contact() {
     <>
       <main>
         <div className="contactPage">
+          <Whatsapp/>
           <div className="heading">
             <h1>Contact us or ask your questions!</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, est? Blanditiis voluptas exercitationem necessitatibus pariatur asperiores ex laborum, odio vel sapiente, voluptate praesentium laboriosam temporibus! Qui enim quod distinctio ad?</p>

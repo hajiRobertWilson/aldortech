@@ -4,10 +4,11 @@ import Loading from "@/app/loading";
 import { IonIcon } from "@ionic/react";
 import { chevronForward } from 'ionicons/icons'
 import Link from "next/link"
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Suspense, useEffect, useState } from "react"
 
 export default function BlogReader() {
+    const router = useRouter()
     const [blog, setBlog] = useState('')
     const [loading, setLoading] = useState(true)
     const pathName = usePathname()
@@ -36,7 +37,7 @@ export default function BlogReader() {
                 <h1 style={{ fontSize: '2.8rem' }}>Blog Reader: Blog {blog.id}</h1>
                 <div style={{ backgroundColor: 'white', color: 'black', padding: '20px' }}>
                     <h1>title:{blog.value}</h1>
-                    <h2><IonIcon icon={chevronForward} /> <Link style={{ color: 'blue' }} href={'/'}>Home</Link> / <Link style={{ color: 'blue' }} href={'/blogs'}>Blogs</Link> / {blog.title}</h2>
+                    <h2><IonIcon icon={chevronForward} /> <Link style={{ color: 'blue' }} href={'/'}>Home</Link> / <Link style={{ color: 'blue' }} href={'/blogs'}>Blogs</Link> /{blog.title}</h2>
                 </div>
             </Suspense>
         </>

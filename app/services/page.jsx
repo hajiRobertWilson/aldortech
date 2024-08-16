@@ -4,6 +4,7 @@ import "../global.queries.css";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import { IndCard, ServiceCard } from "@/components/Cards";
+import Whatsapp from "@/components/whatsapp";
 
 export const metadata = {
     title: 'Services | Aldor Technologies',
@@ -16,6 +17,7 @@ export default function Services() {
         <>
             <main>
                 <div className="servicePage">
+                    <Whatsapp />
                     <div className="posterCont">
                         <div className="imgCont">
                             <div className="img">
