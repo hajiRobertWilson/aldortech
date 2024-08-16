@@ -16,7 +16,6 @@ export async function GET(req) {
         const clipCollection = dataBase.collection('ClipBoard')
         const find = await clipCollection.findOne({ _id: new ObjectId(`66b89aac7b1ffd2e989657ad`) })
         let resData = cards.find(card => card.id === find.blogId)
-        console.log('Data: ', resData)
         return new Response(JSON.stringify({ msg: 'Request Recieved', data: resData }), {
             status: 200,
             headers: { 'Content-Type': 'application/json' }
