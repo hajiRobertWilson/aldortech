@@ -14,9 +14,8 @@ export default function BlogReader() {
     const { data } = useDataContext()
     useEffect(() => {
         fetch('/api/blog/readBlog', {
-            method: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
+            method: 'get',
+            headers: { 'Content-Type': 'application/json' }
         }).then(res => res.json()).then(result => {
             setBlog(result.data)
             setLoading(false)
