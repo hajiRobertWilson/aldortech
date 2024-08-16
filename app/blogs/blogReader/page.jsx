@@ -12,11 +12,8 @@ export default function BlogReader() {
     // const { data } = useDataContext()
     useEffect(() => {
         fetch('/api/blog/readBlog').then(res => res.json()).then(result => {
-            console.log('inside fetch response')
             setBlog(result.data)
-            console.log(result)
         }).catch(err => console.log(err))
-        console.log('Outside after fetch api')
     }, [pathName])
     useEffect(() => {
         document.title = blog.title ? blog.title : 'Blog Reader | Aldor Technologies'
