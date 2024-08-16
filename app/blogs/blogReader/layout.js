@@ -1,3 +1,6 @@
+import Loading from "@/app/loading";
+import { Suspense } from "react";
+
 export const metadata = {
     title: "BlogReader | Aldor Technologies"
 };
@@ -5,7 +8,9 @@ export const metadata = {
 export default function BlogReaderLayout({ children }) {
     return (
         <div>
-            {children}
+            <Suspense fallback={<Loading />}>
+                {children}
+            </Suspense>
         </div>
     )
 }
