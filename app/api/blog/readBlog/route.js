@@ -12,8 +12,8 @@ export async function POST(req) {
         let cards =await collection.find().toArray()
 
         const clipCollection = dataBase.collection('ClipBoard')
-        const find = await clipCollection.findOne({ blogId: body })
-        if (find && find.blogId === body) {
+        const find = await clipCollection.findOne()
+        if (find && find.blogId) {
             console.log(find)
             let resData = cards.find(card => card.id === find.blogId)
             return new Response(JSON.stringify({ msg: 'Request Recieved', data: resData, blogId: `BlogID from readBlog route: ${body}` }), {
