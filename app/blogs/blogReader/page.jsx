@@ -13,6 +13,7 @@ export default function BlogReader() {
     useEffect(() => {
         fetch('/api/blog/readBlog').then(res => res.json()).then(result => {
             setBlog(result.data)
+            console.log(result.blogId)
         }).catch(err => console.log(err))
     }, [pathName])
     useEffect(() => {
