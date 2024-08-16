@@ -71,11 +71,11 @@ body {
     max-width: 1800px;
     min-width: 370px;
     position: relative;
-    /* background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg.webp');
     background-position: center;
-    background-size: cover; */
-    background-color: var(--theme-contrast);
+    background-size: cover;
+    /* background-color: var(--theme-contrast); */
     overflow: hidden;
 }
 
@@ -103,43 +103,43 @@ main {
     z-index: 50;
     bottom: 0;
     right: 0;
+    margin: 8px;
 }
 
 .quikIconCont .whatsCont {
-    background-color: green;
-    margin: 15px 10px;
-    padding: 11px 10px 5px 11px;
-    border-radius: 50%;
     cursor: pointer;
     transition: all 0.5s;
 }
 
 .quikIconCont .whatsCont .whatsapp {
-    font-size: 40px;
+    font-size: 35px;
+    background-color: green;
+    border-radius: 50%;
+    padding: 8px;
     color: white;
 }
 
 .quikIconCont .whatsCont:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .quikIconCont .upCont {
-    margin: 15px 10px;
-    padding: 11px 10px 5px 11px;
-    border-radius: 50%;
-    background-color: var(--blue-1);
     cursor: pointer;
     transition: all 0.5s;
+    display: none;
 }
 
 .quikIconCont .upCont .arrowUp {
-    font-size: 40px;
+    font-size: 35px;
+    border-radius: 50%;
+    padding: 8px;
+    background-color: var(--blue-1);
     color: white;
     transition: all 0.5s;
 }
 
 .quikIconCont .upCont:hover .arrowUp {
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
 
 /* _________________ Blog Card Styles ______________________ */
@@ -547,34 +547,50 @@ main {
     margin-top: 150px;
 }
 
-.postCont1 .slideContent {
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.slideContent {
     display: flex;
     flex-flow: row nowrap;
     max-width: 1800px;
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
     border-bottom: 2px solid var(--theme-border);
     border-top: 2px solid var(--theme-border);
+    transition: all 5s;
 
 }
+.slideContent:hover ul{
+    animation-play-state: paused;
+}
 
-.postCont1 .slideContent .slideServices {
+.slideContent ul {
+    white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 0 30px;
+    animation: 40s slide infinite linear;
+}
+
+.slideContent li {
+    font-size: 1rem;
+    padding: 10px 30px;
     user-select: none;
     background-color: var(--bg-gradient);
     color: var(--theme-text-color);
-    height: 50px;
     min-width: fit-content;
-    transition: all 0.5s;
-}
-
-.postCont1 .slideContent .slideServices:hover {
-    background-color: var(--theme-hover-color);
+    transition: transform 0.5s ease-in-out;
 }
 
 .postCont1 .brand,

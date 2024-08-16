@@ -3,6 +3,7 @@ import "../globals.css";
 import "../global.queries.css";
 import Footer from "@/components/footer";
 import PortComponent from "@/components/portfolio";
+import Whatsapp from "@/components/whatsapp";
 
 export const metadata = {
     title: 'Portfolio | Aldor Technologies',
@@ -14,6 +15,7 @@ export default function Portfolio() {
         <>
             <main >
                 <div className="portPage">
+                    <Whatsapp/>
                     <PortComponent />
                 </div>
                 <Footer />

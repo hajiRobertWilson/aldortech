@@ -1,9 +1,11 @@
 "use client"
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function ServiceSlider() {
     const services = [
+
         'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'React-JS', 'NEXT-JS', 'JQuery',
         'Web Designing', 'Web Development', 'SEO', 'E-Commerce', 'SPAs',
         'Inventory Applications', 'Web Hosting', 'Web Deployment', 'WordPress',
@@ -14,9 +16,16 @@ export default function ServiceSlider() {
         <>
             <div className='postCont1'>
                 <div className='slideContent'>
-                    {services.map(service => (
-                        <div key={service} className='slideServices'>{service}</div>
-                    ))}
+                    <ul>
+                        {
+                            services.map(service => <li key={service}>{service}</li>)
+                        }
+                    </ul>
+                    <ul>
+                        {
+                            services.map(service => <li key={service}>{service}</li>)
+                        }
+                    </ul>
                 </div>
                 <div className="brand">
                     <h1>Aldor Technologies & Soft Solutions</h1>

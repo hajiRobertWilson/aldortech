@@ -23,9 +23,6 @@ export default function RootLayout({ children }) {
       <body>
         <Provider>
           {
-            (pathName === '/blogs/blogReader') ? '' : <Whatsapp />
-          }
-          {
             (pathName === '/blogs/blogReader') ? '' : <Navbar />
           }
           {children}

@@ -11,6 +11,7 @@ import QuikBlogs from "@/components/quikBlogs";
 import Reviews from "@/components/reviews";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Whatsapp from "@/components/whatsapp";
 
 export const metadata = {
   title: "Home | Aldor Technologies",
@@ -23,6 +24,7 @@ export default function Home() {
       <main>
         <div className="homePage">
           <Suspense fallback={<Loading />}>
+            <Whatsapp />
             <HeroSection />
             <ServiceSlider />
             <Headings />
