@@ -9,11 +9,15 @@ import { useEffect, useState } from "react"
 export default function BlogReader() {
     const [blog, setBlog] = useState('')
     const pathName = usePathname()
-    // const { data } = useDataContext()
+    const { data } = useDataContext()
     useEffect(() => {
-        fetch('/api/blog/readBlog').then(res => res.json()).then(result => {
+        fetch('/api/blog/readBlog',{
+            method:'post',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(data)
+        }).then(res => res.json()).then(result => {
             setBlog(result.data)
-            console.log(result.blogId)
+            console.log(result)
         }).catch(err => console.log(err))
     }, [pathName])
     useEffect(() => {
