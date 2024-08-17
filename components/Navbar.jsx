@@ -1,16 +1,16 @@
 "use client"
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname} from "next/navigation";
 import { useEffect, useState } from "react";
+import ThemeBtn from "./themeBtn";
+import { useDataContext } from "@/app/context";
 
 export default function Navbar() {
+    const { theme } = useDataContext()
     const links = ['Home', 'Services', 'Portfolio', 'Blogs', 'About Us', 'Contact'];
     const path = ['/', '/services', '/portfolio', '/blogs', '/about', '/contact'];
     const index = [0, 1, 2, 3, 4, 5];
     const [menuElement, setMenuElement] = useState();
-    const [theme, setTheme] = useState('light')
     const [dropdownBtn, setDropdownBtn] = useState();
     const [windowWidth, setWindowWidth] = useState();
     const pathName = usePathname()
@@ -67,31 +67,16 @@ export default function Navbar() {
             menuElement.classList.remove('show')
         }
 
-        // ----Theme Changing and Theme Button Handler----//
-        const themebtn = document.getElementById('themeBtnCont');
-        let inner = document.getElementById('inner');
-        const toggler = () => {
-            inner.classList.toggle('slide')
-            root.classList.toggle('dark-theme');
-            setTheme((theme === 'light') ? 'dark' : 'light')
-
-        }
-        themebtn.addEventListener('click', toggler);
-
-
         return () => {
             window.onscroll = null;
             window.removeEventListener("resize", handleWindow)
-            themebtn.removeEventListener('click', toggler);
         }
     }, [theme, pathName, windowWidth])
 
     return (
         <>
             <div className="toolBarCont">
-                <div id="themeBtnCont" className="themeBtnCont">
-                    <div id="inner" className="inner"><FontAwesomeIcon icon={(theme === 'light') ? faMoon : faSun} /></div>
-                </div>
+                <ThemeBtn />
             </div>
             <div className="navBar">
                 <div className="navContainer">

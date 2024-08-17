@@ -5,7 +5,6 @@ import "./globals.css";
 import "./global.queries.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import Whatsapp from "@/components/whatsapp";
 import { Provider } from "./context";
 import { usePathname } from "next/navigation";
 config.autoAddCss = false;

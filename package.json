@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@ionic/react": "^8.2.6",
+    "@weavy/uikit-react": "^24.0.3",
     "dotenv": "^16.4.5",
     "fs": "^0.0.1-security",
     "ionicons": "^7.4.0",
