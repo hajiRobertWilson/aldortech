@@ -320,7 +320,7 @@ main {
     background: var(--bg-gradient);
 }
 
-.toolBarCont .themeBtnCont {
+.themeBtnCont {
     position: relative;
     margin: 5px 20px;
     height: 15px;
@@ -330,7 +330,7 @@ main {
     cursor: pointer;
 }
 
-.toolBarCont .themeBtnCont .inner {
+.themeBtnCont .inner {
     position: absolute;
     display: flex;
     align-items: center;
@@ -345,7 +345,7 @@ main {
     transition: all 1s;
 }
 
-.toolBarCont .themeBtnCont .inner.slide {
+.themeBtnCont .inner.slide {
     left: 30px;
 }
 
