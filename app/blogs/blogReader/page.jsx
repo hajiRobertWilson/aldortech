@@ -1,11 +1,11 @@
 "use client"
 import { useDataContext } from "@/app/context"
 import Loading from "@/app/loading";
-import { IonIcon } from "@ionic/react";
-import { chevronForward } from 'ionicons/icons'
-import Link from "next/link"
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Suspense, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
+import "./readerStyle.css";
+import ThemeBtn from "@/components/themeBtn";
 
 export default function BlogReader() {
     const router = useRouter()
@@ -33,13 +33,23 @@ export default function BlogReader() {
     }
     return (
         <>
-            <Suspense fallback={<Loading />}>
-                <h1 style={{ fontSize: '2.8rem' }}>Blog Reader: Blog {blog.id}</h1>
-                <div style={{ backgroundColor: 'white', color: 'black', padding: '20px' }}>
-                    <h1>title:{blog.value}</h1>
-                    <h2><IonIcon icon={chevronForward} /> <Link style={{ color: 'blue' }} href={'/'}>Home</Link> / <Link style={{ color: 'blue' }} href={'/blogs'}>Blogs</Link> /{blog.title}</h2>
+            <div className="wrapContainer">
+                <div className="toolBar">
+                    <h2><Link style={{ color: 'blue', textDecoration: 'underline' }} href={'/'}>Home</Link> / <Link style={{ color: 'blue', textDecoration: 'underline' }} href={'/blogs'}>Blogs</Link> / {blog.title}</h2>
+                    <ThemeBtn />
                 </div>
-            </Suspense>
+                <div className="tocCont">
+                    <ul>
+                        <li id="mainHeading"><a href="#">Lorem Ipsum</a></li>
+                        <li id="subHeading"><a href="#djksd">djksd</a></li>
+                    </ul>
+                </div>
+                <div className="blogContent">
+                    <article>
+                        <h1>{blog.title}</h1>
+                    </article>
+                </div>
+            </div>
         </>
     )
 }

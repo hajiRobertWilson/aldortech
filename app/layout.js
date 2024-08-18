@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
-      <body>
+      <body style={{ background: (pathName === '/blogs/blogReader') ? 'none' : '' }}>
         <Provider>
           {
             (pathName === '/blogs/blogReader') ? '' : <Navbar />

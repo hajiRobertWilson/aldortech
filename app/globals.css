@@ -571,7 +571,8 @@ main {
     transition: all 5s;
 
 }
-.slideContent:hover ul{
+
+.slideContent:hover ul {
     animation-play-state: paused;
 }
 
@@ -898,6 +899,7 @@ main {
     width: 100%;
     gap: 40px;
     padding: 40px 50px 80px 50px;
+    margin-bottom: 150px;
 }
 
 
