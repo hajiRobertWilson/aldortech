@@ -16,7 +16,7 @@
     --theme-icon: white;
     --toolbar-bg: rgba(221, 220, 229, 1);
     --nav-border: rgba(221, 220, 229, 1);
-    --theme-border: white;
+    --theme-border: rgba(221, 220, 229, 1);
     --dropdown-link-border: black;
     --navBg: rgba(224, 247, 252, 1);
     --theme-text-color: black;
@@ -52,7 +52,7 @@
     --theme-border: #130f40;
     --theme-contrast: black;
     --toolbar-bg: #130f40;
-    --nav-border: whitesmoke;
+    --nav-border: #130f40;
     --dropdown-link-border: white;
     --navBg: #000000;
     --theme-hover-color: #1679AB;
@@ -72,11 +72,11 @@ body {
     min-width: 370px;
     position: relative;
     background-repeat: no-repeat;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg.webp');
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/bg.webp');
     background-position: center;
-    background-size: cover;
-    /* background-color: var(--theme-contrast); */
-    overflow: hidden;
+    background-size: cover; */
+    background-color: var(--theme-contrast);
+    /* overflow: hidden; */
 }
 
 main {
@@ -84,10 +84,10 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    max-height: 100vh;
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    /* max-height: 100vh;
+    height: 100vh; */
+    /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
     padding-top: 100px;
     transition: all 0.5s;
 }
@@ -1346,6 +1346,7 @@ main {
     background: var(--theme-footer);
     color: white;
     justify-content: space-between;
+    border-top: 2px solid var(--theme-border);
 }
 
 .footerCont .container {
@@ -1435,7 +1436,7 @@ main {
 }
 
 .footerCont .copyright {
-    border-top: 2px solid var(--nav-border);
+    border-top: 2px solid var(--theme-border);
     color: var(--theme-text-color);
     font-size: 1rem;
     text-align: center;

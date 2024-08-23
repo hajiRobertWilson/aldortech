@@ -7,9 +7,11 @@ import { BlogCard } from "@/components/Cards";
 import { useEffect, useState } from "react";
 import { useDataContext } from "../context";
 import Whatsapp from "@/components/whatsapp";
+import Loading from "../loading";
 
 
 export default function Blogs() {
+    const [loading, setLoading] = useState(true)
     const { position, setPosition } = useDataContext()
     const [data, setData] = useState([]);
 
@@ -17,6 +19,7 @@ export default function Blogs() {
     useEffect(() => {
         fetch('/api/blog').then(response => response.json()).then(result => {
             setData(result.data)
+            setLoading(false)
             document.querySelector('main').scrollTo({ top: position, behavior: 'smooth' })
         }).catch(err => console.log(err))
 
@@ -36,11 +39,12 @@ export default function Blogs() {
             }
         }
     }, [])
+    if (loading) return <Loading />
     return (
         <>
             <main>
                 <div className="blogPage">
-                    <Whatsapp/>
+                    <Whatsapp />
                     <div className="headingCont">
                         <h1>Our New Blogs</h1>
                         <h2>Latest New Blogs</h2>

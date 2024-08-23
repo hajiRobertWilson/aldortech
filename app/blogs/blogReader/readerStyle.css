@@ -1,14 +1,10 @@
-body {
-    background-color: white;
-    /* margin-top: 50px; */
-}
-
 .wrapContainer {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
+    /* align-items: center; */
+    justify-content: end;
+    color: var(--theme-text-color);
 }
 
 .toolBar {
@@ -26,4 +22,80 @@ body {
 
 .toolBar h2 {
     padding-left: 20px;
+}
+
+.toolBar a {
+    color: #1679AB;
+    text-decoration: underline;
+}
+
+.tocCont {
+    width: 25%;
+    margin-top: 100px;
+    position: fixed;
+    left: 0;
+    padding: 0 20px;
+}
+
+.tocCont .subCont {
+    border: 2px solid #1679AB;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    min-width: fit-content;
+}
+
+.tocCont h2 {
+    border-bottom: 2px solid #1679AB;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #2491c8;
+}
+
+.tocCont h3 {
+    padding: 20px 0 0 20px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.tocCont ul {
+    list-style: disc;
+    list-style-position: inside;
+    padding: 20px;
+}
+
+.blogContent {
+    width: 75%;
+    padding: 100px;
+    /* height: 200vh; */
+    text-align: justify;
+}
+
+article p {
+    font-size: 1.1rem;
+}
+
+article section {
+    margin-bottom: 50px;
+}
+article section img{
+    margin-top: 20px ;
+    border-radius: 10px;
+}
+
+article #mainSection h1 {
+    color: #1679AB;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+article #subSection h2 {
+    color: #1679AB;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
